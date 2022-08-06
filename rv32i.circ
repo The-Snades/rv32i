@@ -1,0 +1,3389 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project source="3.7.2" version="1.0">
+  This file is intended to be loaded by Logisim-evolution v3.7.2(https://github.com/logisim-evolution/).
+
+  <lib desc="#Wiring" name="0">
+    <tool name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="32"/>
+    </tool>
+    <tool name="Tunnel">
+      <a name="width" val="32"/>
+    </tool>
+  </lib>
+  <lib desc="#Gates" name="1"/>
+  <lib desc="#Plexers" name="2"/>
+  <lib desc="#Arithmetic" name="3"/>
+  <lib desc="#Memory" name="4"/>
+  <lib desc="#I/O" name="5"/>
+  <lib desc="#TTL" name="6"/>
+  <lib desc="#TCL" name="7"/>
+  <lib desc="#Base" name="8">
+    <tool name="Text Tool">
+      <a name="font" val="SansSerif plain 12"/>
+    </tool>
+  </lib>
+  <lib desc="#BFH-Praktika" name="9"/>
+  <lib desc="#Input/Output-Extra" name="10"/>
+  <lib desc="#Soc" name="11"/>
+  <main name="main"/>
+  <options>
+    <a name="gateUndefined" val="ignore"/>
+    <a name="simlimit" val="1000"/>
+    <a name="simrand" val="0"/>
+  </options>
+  <mappings>
+    <tool lib="8" map="Button2" name="Menu Tool"/>
+    <tool lib="8" map="Button3" name="Menu Tool"/>
+    <tool lib="8" map="Ctrl Button1" name="Menu Tool"/>
+  </mappings>
+  <toolbar>
+    <tool lib="8" name="Poke Tool"/>
+    <tool lib="8" name="Edit Tool"/>
+    <tool lib="8" name="Wiring Tool"/>
+    <tool lib="8" name="Text Tool">
+      <a name="font" val="SansSerif plain 12"/>
+    </tool>
+    <sep/>
+    <tool lib="0" name="Pin"/>
+    <tool lib="0" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+    </tool>
+    <sep/>
+    <tool lib="1" name="NOT Gate"/>
+    <tool lib="1" name="AND Gate"/>
+    <tool lib="1" name="OR Gate"/>
+    <tool lib="1" name="XOR Gate"/>
+    <tool lib="1" name="NAND Gate"/>
+    <tool lib="1" name="NOR Gate"/>
+    <sep/>
+    <tool lib="4" name="D Flip-Flop"/>
+    <tool lib="4" name="Register"/>
+  </toolbar>
+  <circuit name="main">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="main"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <comp lib="1" loc="(2530,270)" name="AND Gate">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp loc="(1000,370)" name="Reg_File"/>
+    <comp loc="(1000,650)" name="ImmGen">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp loc="(1000,90)" name="Control">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp loc="(1410,390)" name="ID_EX_DIV"/>
+    <comp loc="(1740,490)" name="mux_2_1">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp loc="(2080,260)" name="sum">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp loc="(2080,420)" name="ALU">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp loc="(2080,620)" name="alu_control">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp loc="(2440,360)" name="EX_MEM_DIV"/>
+    <comp loc="(2700,660)" name="datamem_subcircuit"/>
+    <comp loc="(3030,380)" name="MEM_WB_DIV"/>
+    <comp loc="(3350,450)" name="mux_2_1">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp loc="(410,470)" name="IM"/>
+    <comp loc="(430,200)" name="mux_2_1">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp loc="(440,340)" name="sum">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp loc="(720,470)" name="IF_ID_DIV"/>
+    <wire from="(1000,650)" to="(1040,650)"/>
+    <wire from="(1040,650)" to="(1040,660)"/>
+    <wire from="(1410,390)" to="(1470,390)"/>
+    <wire from="(1470,390)" to="(1470,640)"/>
+    <wire from="(1470,640)" to="(1860,640)"/>
+    <wire from="(1740,440)" to="(1740,490)"/>
+    <wire from="(1740,440)" to="(1860,440)"/>
+    <wire from="(1860,500)" to="(1860,570)"/>
+    <wire from="(1860,570)" to="(2080,570)"/>
+    <wire from="(2080,570)" to="(2080,620)"/>
+    <wire from="(410,470)" to="(440,470)"/>
+    <wire from="(440,470)" to="(440,520)"/>
+    <wire from="(740,650)" to="(780,650)"/>
+  </circuit>
+  <circuit name="datamem_subcircuit">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="datamem_subcircuit"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(330,110)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="input_data"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(330,190)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="byte_address"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(330,240)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="clock"/>
+    </comp>
+    <comp lib="0" loc="(330,260)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="read"/>
+    </comp>
+    <comp lib="0" loc="(330,280)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="write"/>
+    </comp>
+    <comp lib="0" loc="(660,170)" name="Splitter">
+      <a name="facing" val="south"/>
+      <a name="fanout" val="4"/>
+      <a name="incoming" val="4"/>
+    </comp>
+    <comp lib="0" loc="(940,110)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="output_data"/>
+      <a name="output" val="true"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp loc="(650,110)" name="datamem_interface">
+      <a name="appearance" val="evolution"/>
+    </comp>
+    <comp loc="(990,200)" name="datamem">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp loc="(990,300)" name="datamem">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp loc="(990,400)" name="datamem">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp loc="(990,500)" name="datamem">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <wire from="(1000,400)" to="(1000,610)"/>
+    <wire from="(1010,300)" to="(1010,620)"/>
+    <wire from="(1020,200)" to="(1020,630)"/>
+    <wire from="(330,110)" to="(420,110)"/>
+    <wire from="(330,190)" to="(340,190)"/>
+    <wire from="(330,240)" to="(350,240)"/>
+    <wire from="(330,260)" to="(360,260)"/>
+    <wire from="(330,280)" to="(370,280)"/>
+    <wire from="(340,120)" to="(340,190)"/>
+    <wire from="(340,120)" to="(420,120)"/>
+    <wire from="(350,130)" to="(350,210)"/>
+    <wire from="(350,130)" to="(420,130)"/>
+    <wire from="(350,210)" to="(350,240)"/>
+    <wire from="(350,210)" to="(660,210)"/>
+    <wire from="(360,140)" to="(360,260)"/>
+    <wire from="(360,140)" to="(420,140)"/>
+    <wire from="(370,150)" to="(370,280)"/>
+    <wire from="(370,150)" to="(420,150)"/>
+    <wire from="(380,160)" to="(380,630)"/>
+    <wire from="(380,160)" to="(420,160)"/>
+    <wire from="(380,630)" to="(1020,630)"/>
+    <wire from="(390,170)" to="(390,620)"/>
+    <wire from="(390,170)" to="(420,170)"/>
+    <wire from="(390,620)" to="(1010,620)"/>
+    <wire from="(400,180)" to="(400,610)"/>
+    <wire from="(400,180)" to="(420,180)"/>
+    <wire from="(400,610)" to="(1000,610)"/>
+    <wire from="(410,190)" to="(410,600)"/>
+    <wire from="(410,190)" to="(420,190)"/>
+    <wire from="(410,600)" to="(990,600)"/>
+    <wire from="(650,110)" to="(940,110)"/>
+    <wire from="(650,120)" to="(750,120)"/>
+    <wire from="(650,130)" to="(740,130)"/>
+    <wire from="(650,140)" to="(730,140)"/>
+    <wire from="(650,150)" to="(720,150)"/>
+    <wire from="(650,160)" to="(710,160)"/>
+    <wire from="(650,170)" to="(660,170)"/>
+    <wire from="(660,200)" to="(660,210)"/>
+    <wire from="(660,200)" to="(760,200)"/>
+    <wire from="(670,190)" to="(670,520)"/>
+    <wire from="(670,520)" to="(770,520)"/>
+    <wire from="(680,190)" to="(680,420)"/>
+    <wire from="(680,420)" to="(770,420)"/>
+    <wire from="(690,190)" to="(690,320)"/>
+    <wire from="(690,320)" to="(770,320)"/>
+    <wire from="(700,190)" to="(700,220)"/>
+    <wire from="(700,220)" to="(770,220)"/>
+    <wire from="(710,160)" to="(710,240)"/>
+    <wire from="(710,240)" to="(710,340)"/>
+    <wire from="(710,240)" to="(770,240)"/>
+    <wire from="(710,340)" to="(710,440)"/>
+    <wire from="(710,340)" to="(770,340)"/>
+    <wire from="(710,440)" to="(710,540)"/>
+    <wire from="(710,440)" to="(770,440)"/>
+    <wire from="(710,540)" to="(770,540)"/>
+    <wire from="(720,150)" to="(720,560)"/>
+    <wire from="(720,560)" to="(770,560)"/>
+    <wire from="(730,140)" to="(730,460)"/>
+    <wire from="(730,460)" to="(770,460)"/>
+    <wire from="(740,130)" to="(740,360)"/>
+    <wire from="(740,360)" to="(770,360)"/>
+    <wire from="(750,120)" to="(750,260)"/>
+    <wire from="(750,260)" to="(770,260)"/>
+    <wire from="(760,200)" to="(760,300)"/>
+    <wire from="(760,200)" to="(770,200)"/>
+    <wire from="(760,300)" to="(760,400)"/>
+    <wire from="(760,300)" to="(770,300)"/>
+    <wire from="(760,400)" to="(760,500)"/>
+    <wire from="(760,400)" to="(770,400)"/>
+    <wire from="(760,500)" to="(770,500)"/>
+    <wire from="(990,200)" to="(1020,200)"/>
+    <wire from="(990,300)" to="(1010,300)"/>
+    <wire from="(990,400)" to="(1000,400)"/>
+    <wire from="(990,500)" to="(990,600)"/>
+  </circuit>
+  <circuit name="Reg_File">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="Reg_File"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(150,720)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="write_control"/>
+    </comp>
+    <comp lib="0" loc="(210,580)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="clock"/>
+    </comp>
+    <comp lib="0" loc="(210,680)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="clear"/>
+    </comp>
+    <comp lib="0" loc="(2320,160)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="read_data_2"/>
+      <a name="output" val="true"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(2320,80)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="read_data_1"/>
+      <a name="output" val="true"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(240,540)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="read_register_1"/>
+      <a name="width" val="5"/>
+    </comp>
+    <comp lib="0" loc="(240,560)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="read_register_2"/>
+      <a name="width" val="5"/>
+    </comp>
+    <comp lib="0" loc="(240,780)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="write_register"/>
+      <a name="width" val="5"/>
+    </comp>
+    <comp lib="0" loc="(270,630)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="write_data"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(440,750)" name="Splitter">
+      <a name="facing" val="south"/>
+      <a name="fanout" val="32"/>
+      <a name="incoming" val="32"/>
+    </comp>
+    <comp lib="0" loc="(800,560)" name="Constant">
+      <a name="value" val="0x0"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(840,820)" name="Constant"/>
+    <comp loc="(1070,1000)" name="reg32b_falling_edge">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="labelvisible" val="true"/>
+    </comp>
+    <comp loc="(1070,1100)" name="reg32b_falling_edge">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="labelvisible" val="true"/>
+    </comp>
+    <comp loc="(1070,1200)" name="reg32b_falling_edge">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="labelvisible" val="true"/>
+    </comp>
+    <comp loc="(1070,1300)" name="reg32b_falling_edge">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="labelvisible" val="true"/>
+    </comp>
+    <comp loc="(1070,1400)" name="reg32b_falling_edge">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="labelvisible" val="true"/>
+    </comp>
+    <comp loc="(1070,1500)" name="reg32b_falling_edge">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="labelvisible" val="true"/>
+    </comp>
+    <comp loc="(1070,1600)" name="reg32b_falling_edge">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp loc="(1070,1700)" name="reg32b_falling_edge">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="labelvisible" val="true"/>
+    </comp>
+    <comp loc="(1070,1800)" name="reg32b_falling_edge">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="labelvisible" val="true"/>
+    </comp>
+    <comp loc="(1070,1900)" name="reg32b_falling_edge">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="labelvisible" val="true"/>
+    </comp>
+    <comp loc="(1070,2000)" name="reg32b_falling_edge">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="labelvisible" val="true"/>
+    </comp>
+    <comp loc="(1070,2100)" name="reg32b_falling_edge">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="labelvisible" val="true"/>
+    </comp>
+    <comp loc="(1070,2200)" name="reg32b_falling_edge">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="labelvisible" val="true"/>
+    </comp>
+    <comp loc="(1070,2300)" name="reg32b_falling_edge">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="labelvisible" val="true"/>
+    </comp>
+    <comp loc="(1070,2400)" name="reg32b_falling_edge">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="labelvisible" val="true"/>
+    </comp>
+    <comp loc="(1070,2500)" name="reg32b_falling_edge">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="labelvisible" val="true"/>
+    </comp>
+    <comp loc="(1070,2600)" name="reg32b_falling_edge">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="labelvisible" val="true"/>
+    </comp>
+    <comp loc="(1070,2700)" name="reg32b_falling_edge">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="labelvisible" val="true"/>
+    </comp>
+    <comp loc="(1070,2800)" name="reg32b_falling_edge">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="labelvisible" val="true"/>
+    </comp>
+    <comp loc="(1070,2900)" name="reg32b_falling_edge">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="labelvisible" val="true"/>
+    </comp>
+    <comp loc="(1070,3000)" name="reg32b_falling_edge">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="labelvisible" val="true"/>
+    </comp>
+    <comp loc="(1070,3100)" name="reg32b_falling_edge">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="labelvisible" val="true"/>
+    </comp>
+    <comp loc="(1070,3200)" name="reg32b_falling_edge">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="labelvisible" val="true"/>
+    </comp>
+    <comp loc="(1070,3300)" name="reg32b_falling_edge">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="labelvisible" val="true"/>
+    </comp>
+    <comp loc="(1070,3400)" name="reg32b_falling_edge">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="labelvisible" val="true"/>
+    </comp>
+    <comp loc="(1070,3500)" name="reg32b_falling_edge">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="labelvisible" val="true"/>
+    </comp>
+    <comp loc="(1070,3600)" name="reg32b_falling_edge">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="labelvisible" val="true"/>
+    </comp>
+    <comp loc="(1070,3700)" name="reg32b_falling_edge">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="labelvisible" val="true"/>
+    </comp>
+    <comp loc="(1070,3800)" name="reg32b_falling_edge">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="labelvisible" val="true"/>
+    </comp>
+    <comp loc="(1070,3900)" name="reg32b_falling_edge">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="labelvisible" val="true"/>
+    </comp>
+    <comp loc="(1070,800)" name="reg32b_falling_edge">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="labelvisible" val="true"/>
+    </comp>
+    <comp loc="(1070,900)" name="reg32b_falling_edge">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="labelvisible" val="true"/>
+    </comp>
+    <comp loc="(1620,50)" name="mux_32_1">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="labelvisible" val="true"/>
+    </comp>
+    <comp loc="(2210,50)" name="mux_32_1">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp loc="(400,700)" name="register_file">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <wire from="(1070,1000)" to="(1090,1000)"/>
+    <wire from="(1070,1100)" to="(1100,1100)"/>
+    <wire from="(1070,1200)" to="(1110,1200)"/>
+    <wire from="(1070,1300)" to="(1120,1300)"/>
+    <wire from="(1070,1400)" to="(1130,1400)"/>
+    <wire from="(1070,1500)" to="(1140,1500)"/>
+    <wire from="(1070,1600)" to="(1150,1600)"/>
+    <wire from="(1070,1700)" to="(1160,1700)"/>
+    <wire from="(1070,1800)" to="(1170,1800)"/>
+    <wire from="(1070,1900)" to="(1180,1900)"/>
+    <wire from="(1070,2000)" to="(1190,2000)"/>
+    <wire from="(1070,2100)" to="(1200,2100)"/>
+    <wire from="(1070,2200)" to="(1210,2200)"/>
+    <wire from="(1070,2300)" to="(1220,2300)"/>
+    <wire from="(1070,2400)" to="(1230,2400)"/>
+    <wire from="(1070,2500)" to="(1240,2500)"/>
+    <wire from="(1070,2600)" to="(1250,2600)"/>
+    <wire from="(1070,2700)" to="(1260,2700)"/>
+    <wire from="(1070,2800)" to="(1270,2800)"/>
+    <wire from="(1070,2900)" to="(1280,2900)"/>
+    <wire from="(1070,3000)" to="(1290,3000)"/>
+    <wire from="(1070,3100)" to="(1300,3100)"/>
+    <wire from="(1070,3200)" to="(1310,3200)"/>
+    <wire from="(1070,3300)" to="(1320,3300)"/>
+    <wire from="(1070,3400)" to="(1330,3400)"/>
+    <wire from="(1070,3500)" to="(1340,3500)"/>
+    <wire from="(1070,3600)" to="(1350,3600)"/>
+    <wire from="(1070,3700)" to="(1360,3700)"/>
+    <wire from="(1070,3800)" to="(1370,3800)"/>
+    <wire from="(1070,3900)" to="(1380,3900)"/>
+    <wire from="(1070,70)" to="(1070,730)"/>
+    <wire from="(1070,70)" to="(1400,70)"/>
+    <wire from="(1070,730)" to="(1070,800)"/>
+    <wire from="(1070,730)" to="(1660,730)"/>
+    <wire from="(1070,900)" to="(1080,900)"/>
+    <wire from="(1080,740)" to="(1080,900)"/>
+    <wire from="(1080,740)" to="(1670,740)"/>
+    <wire from="(1080,90)" to="(1080,740)"/>
+    <wire from="(1080,90)" to="(1400,90)"/>
+    <wire from="(1090,110)" to="(1090,750)"/>
+    <wire from="(1090,110)" to="(1400,110)"/>
+    <wire from="(1090,750)" to="(1090,1000)"/>
+    <wire from="(1090,750)" to="(1680,750)"/>
+    <wire from="(1100,130)" to="(1100,760)"/>
+    <wire from="(1100,130)" to="(1400,130)"/>
+    <wire from="(1100,760)" to="(1100,1100)"/>
+    <wire from="(1100,760)" to="(1690,760)"/>
+    <wire from="(1110,150)" to="(1110,770)"/>
+    <wire from="(1110,150)" to="(1400,150)"/>
+    <wire from="(1110,770)" to="(1110,1200)"/>
+    <wire from="(1110,770)" to="(1700,770)"/>
+    <wire from="(1120,170)" to="(1120,780)"/>
+    <wire from="(1120,170)" to="(1400,170)"/>
+    <wire from="(1120,780)" to="(1120,1300)"/>
+    <wire from="(1120,780)" to="(1710,780)"/>
+    <wire from="(1130,190)" to="(1130,790)"/>
+    <wire from="(1130,190)" to="(1400,190)"/>
+    <wire from="(1130,790)" to="(1130,1400)"/>
+    <wire from="(1130,790)" to="(1720,790)"/>
+    <wire from="(1140,210)" to="(1140,800)"/>
+    <wire from="(1140,210)" to="(1400,210)"/>
+    <wire from="(1140,800)" to="(1140,1500)"/>
+    <wire from="(1140,800)" to="(1730,800)"/>
+    <wire from="(1150,230)" to="(1150,810)"/>
+    <wire from="(1150,230)" to="(1400,230)"/>
+    <wire from="(1150,810)" to="(1150,1600)"/>
+    <wire from="(1150,810)" to="(1740,810)"/>
+    <wire from="(1160,250)" to="(1160,820)"/>
+    <wire from="(1160,250)" to="(1400,250)"/>
+    <wire from="(1160,820)" to="(1160,1700)"/>
+    <wire from="(1160,820)" to="(1750,820)"/>
+    <wire from="(1170,270)" to="(1170,830)"/>
+    <wire from="(1170,270)" to="(1400,270)"/>
+    <wire from="(1170,830)" to="(1170,1800)"/>
+    <wire from="(1170,830)" to="(1760,830)"/>
+    <wire from="(1180,290)" to="(1180,840)"/>
+    <wire from="(1180,290)" to="(1400,290)"/>
+    <wire from="(1180,840)" to="(1180,1900)"/>
+    <wire from="(1180,840)" to="(1770,840)"/>
+    <wire from="(1190,310)" to="(1190,850)"/>
+    <wire from="(1190,310)" to="(1400,310)"/>
+    <wire from="(1190,850)" to="(1190,2000)"/>
+    <wire from="(1190,850)" to="(1780,850)"/>
+    <wire from="(1200,330)" to="(1200,860)"/>
+    <wire from="(1200,330)" to="(1400,330)"/>
+    <wire from="(1200,860)" to="(1200,2100)"/>
+    <wire from="(1200,860)" to="(1790,860)"/>
+    <wire from="(1210,350)" to="(1210,870)"/>
+    <wire from="(1210,350)" to="(1400,350)"/>
+    <wire from="(1210,870)" to="(1210,2200)"/>
+    <wire from="(1210,870)" to="(1800,870)"/>
+    <wire from="(1220,370)" to="(1220,880)"/>
+    <wire from="(1220,370)" to="(1400,370)"/>
+    <wire from="(1220,880)" to="(1220,2300)"/>
+    <wire from="(1220,880)" to="(1810,880)"/>
+    <wire from="(1230,390)" to="(1230,890)"/>
+    <wire from="(1230,390)" to="(1400,390)"/>
+    <wire from="(1230,890)" to="(1230,2400)"/>
+    <wire from="(1230,890)" to="(1820,890)"/>
+    <wire from="(1240,410)" to="(1240,900)"/>
+    <wire from="(1240,410)" to="(1400,410)"/>
+    <wire from="(1240,900)" to="(1240,2500)"/>
+    <wire from="(1240,900)" to="(1830,900)"/>
+    <wire from="(1250,430)" to="(1250,910)"/>
+    <wire from="(1250,430)" to="(1400,430)"/>
+    <wire from="(1250,910)" to="(1250,2600)"/>
+    <wire from="(1250,910)" to="(1840,910)"/>
+    <wire from="(1260,450)" to="(1260,920)"/>
+    <wire from="(1260,450)" to="(1400,450)"/>
+    <wire from="(1260,920)" to="(1260,2700)"/>
+    <wire from="(1260,920)" to="(1850,920)"/>
+    <wire from="(1270,470)" to="(1270,930)"/>
+    <wire from="(1270,470)" to="(1400,470)"/>
+    <wire from="(1270,930)" to="(1270,2800)"/>
+    <wire from="(1270,930)" to="(1860,930)"/>
+    <wire from="(1280,490)" to="(1280,940)"/>
+    <wire from="(1280,490)" to="(1400,490)"/>
+    <wire from="(1280,940)" to="(1280,2900)"/>
+    <wire from="(1280,940)" to="(1870,940)"/>
+    <wire from="(1290,510)" to="(1290,950)"/>
+    <wire from="(1290,510)" to="(1400,510)"/>
+    <wire from="(1290,950)" to="(1290,3000)"/>
+    <wire from="(1290,950)" to="(1880,950)"/>
+    <wire from="(1300,530)" to="(1300,960)"/>
+    <wire from="(1300,530)" to="(1400,530)"/>
+    <wire from="(1300,960)" to="(1300,3100)"/>
+    <wire from="(1300,960)" to="(1890,960)"/>
+    <wire from="(1310,550)" to="(1310,970)"/>
+    <wire from="(1310,550)" to="(1400,550)"/>
+    <wire from="(1310,970)" to="(1310,3200)"/>
+    <wire from="(1310,970)" to="(1900,970)"/>
+    <wire from="(1320,570)" to="(1320,980)"/>
+    <wire from="(1320,570)" to="(1400,570)"/>
+    <wire from="(1320,980)" to="(1320,3300)"/>
+    <wire from="(1320,980)" to="(1910,980)"/>
+    <wire from="(1330,590)" to="(1330,990)"/>
+    <wire from="(1330,590)" to="(1400,590)"/>
+    <wire from="(1330,990)" to="(1330,3400)"/>
+    <wire from="(1330,990)" to="(1920,990)"/>
+    <wire from="(1340,1000)" to="(1340,3500)"/>
+    <wire from="(1340,1000)" to="(1930,1000)"/>
+    <wire from="(1340,610)" to="(1340,1000)"/>
+    <wire from="(1340,610)" to="(1400,610)"/>
+    <wire from="(1350,1010)" to="(1350,3600)"/>
+    <wire from="(1350,1010)" to="(1940,1010)"/>
+    <wire from="(1350,630)" to="(1350,1010)"/>
+    <wire from="(1350,630)" to="(1400,630)"/>
+    <wire from="(1360,1020)" to="(1360,3700)"/>
+    <wire from="(1360,1020)" to="(1950,1020)"/>
+    <wire from="(1360,650)" to="(1360,1020)"/>
+    <wire from="(1360,650)" to="(1400,650)"/>
+    <wire from="(1370,1030)" to="(1370,3800)"/>
+    <wire from="(1370,1030)" to="(1960,1030)"/>
+    <wire from="(1370,670)" to="(1370,1030)"/>
+    <wire from="(1370,670)" to="(1400,670)"/>
+    <wire from="(1380,1040)" to="(1380,3900)"/>
+    <wire from="(1380,1040)" to="(1970,1040)"/>
+    <wire from="(1380,690)" to="(1380,1040)"/>
+    <wire from="(1380,690)" to="(1400,690)"/>
+    <wire from="(150,720)" to="(180,720)"/>
+    <wire from="(1620,50)" to="(1920,50)"/>
+    <wire from="(1660,70)" to="(1660,730)"/>
+    <wire from="(1660,70)" to="(1990,70)"/>
+    <wire from="(1670,90)" to="(1670,740)"/>
+    <wire from="(1670,90)" to="(1990,90)"/>
+    <wire from="(1680,110)" to="(1680,750)"/>
+    <wire from="(1680,110)" to="(1990,110)"/>
+    <wire from="(1690,130)" to="(1690,760)"/>
+    <wire from="(1690,130)" to="(1990,130)"/>
+    <wire from="(170,700)" to="(170,760)"/>
+    <wire from="(170,700)" to="(180,700)"/>
+    <wire from="(170,760)" to="(260,760)"/>
+    <wire from="(1700,150)" to="(1700,770)"/>
+    <wire from="(1700,150)" to="(1990,150)"/>
+    <wire from="(1710,170)" to="(1710,780)"/>
+    <wire from="(1710,170)" to="(1990,170)"/>
+    <wire from="(1720,190)" to="(1720,790)"/>
+    <wire from="(1720,190)" to="(1990,190)"/>
+    <wire from="(1730,210)" to="(1730,800)"/>
+    <wire from="(1730,210)" to="(1990,210)"/>
+    <wire from="(1740,230)" to="(1740,810)"/>
+    <wire from="(1740,230)" to="(1990,230)"/>
+    <wire from="(1750,250)" to="(1750,820)"/>
+    <wire from="(1750,250)" to="(1990,250)"/>
+    <wire from="(1760,270)" to="(1760,830)"/>
+    <wire from="(1760,270)" to="(1990,270)"/>
+    <wire from="(1770,290)" to="(1770,840)"/>
+    <wire from="(1770,290)" to="(1990,290)"/>
+    <wire from="(1780,310)" to="(1780,850)"/>
+    <wire from="(1780,310)" to="(1990,310)"/>
+    <wire from="(1790,330)" to="(1790,860)"/>
+    <wire from="(1790,330)" to="(1990,330)"/>
+    <wire from="(1800,350)" to="(1800,870)"/>
+    <wire from="(1800,350)" to="(1990,350)"/>
+    <wire from="(1810,370)" to="(1810,880)"/>
+    <wire from="(1810,370)" to="(1990,370)"/>
+    <wire from="(1820,390)" to="(1820,890)"/>
+    <wire from="(1820,390)" to="(1990,390)"/>
+    <wire from="(1830,410)" to="(1830,900)"/>
+    <wire from="(1830,410)" to="(1990,410)"/>
+    <wire from="(1840,430)" to="(1840,910)"/>
+    <wire from="(1840,430)" to="(1990,430)"/>
+    <wire from="(1850,450)" to="(1850,920)"/>
+    <wire from="(1850,450)" to="(1990,450)"/>
+    <wire from="(1860,470)" to="(1860,930)"/>
+    <wire from="(1860,470)" to="(1990,470)"/>
+    <wire from="(1870,490)" to="(1870,940)"/>
+    <wire from="(1870,490)" to="(1990,490)"/>
+    <wire from="(1880,510)" to="(1880,950)"/>
+    <wire from="(1880,510)" to="(1990,510)"/>
+    <wire from="(1890,530)" to="(1890,960)"/>
+    <wire from="(1890,530)" to="(1990,530)"/>
+    <wire from="(1900,550)" to="(1900,970)"/>
+    <wire from="(1900,550)" to="(1990,550)"/>
+    <wire from="(1910,570)" to="(1910,980)"/>
+    <wire from="(1910,570)" to="(1990,570)"/>
+    <wire from="(1920,30)" to="(1920,50)"/>
+    <wire from="(1920,30)" to="(2300,30)"/>
+    <wire from="(1920,590)" to="(1920,990)"/>
+    <wire from="(1920,590)" to="(1990,590)"/>
+    <wire from="(1930,610)" to="(1930,1000)"/>
+    <wire from="(1930,610)" to="(1990,610)"/>
+    <wire from="(1940,630)" to="(1940,1010)"/>
+    <wire from="(1940,630)" to="(1990,630)"/>
+    <wire from="(1950,650)" to="(1950,1020)"/>
+    <wire from="(1950,650)" to="(1990,650)"/>
+    <wire from="(1960,670)" to="(1960,1030)"/>
+    <wire from="(1960,670)" to="(1990,670)"/>
+    <wire from="(1970,690)" to="(1970,1040)"/>
+    <wire from="(1970,690)" to="(1990,690)"/>
+    <wire from="(1980,20)" to="(1980,50)"/>
+    <wire from="(1980,50)" to="(1990,50)"/>
+    <wire from="(210,580)" to="(800,580)"/>
+    <wire from="(210,680)" to="(780,680)"/>
+    <wire from="(2210,160)" to="(2320,160)"/>
+    <wire from="(2210,50)" to="(2210,160)"/>
+    <wire from="(2300,30)" to="(2300,80)"/>
+    <wire from="(2300,80)" to="(2320,80)"/>
+    <wire from="(240,540)" to="(250,540)"/>
+    <wire from="(240,560)" to="(330,560)"/>
+    <wire from="(240,780)" to="(260,780)"/>
+    <wire from="(250,50)" to="(1400,50)"/>
+    <wire from="(250,50)" to="(250,540)"/>
+    <wire from="(260,760)" to="(260,780)"/>
+    <wire from="(270,630)" to="(790,630)"/>
+    <wire from="(330,20)" to="(1980,20)"/>
+    <wire from="(330,20)" to="(330,560)"/>
+    <wire from="(400,700)" to="(420,700)"/>
+    <wire from="(420,700)" to="(420,750)"/>
+    <wire from="(420,750)" to="(440,750)"/>
+    <wire from="(450,3920)" to="(850,3920)"/>
+    <wire from="(450,770)" to="(450,3920)"/>
+    <wire from="(460,3820)" to="(850,3820)"/>
+    <wire from="(460,770)" to="(460,3820)"/>
+    <wire from="(470,3720)" to="(850,3720)"/>
+    <wire from="(470,770)" to="(470,3720)"/>
+    <wire from="(480,3620)" to="(850,3620)"/>
+    <wire from="(480,770)" to="(480,3620)"/>
+    <wire from="(490,3520)" to="(850,3520)"/>
+    <wire from="(490,770)" to="(490,3520)"/>
+    <wire from="(500,3420)" to="(850,3420)"/>
+    <wire from="(500,770)" to="(500,3420)"/>
+    <wire from="(510,3320)" to="(850,3320)"/>
+    <wire from="(510,770)" to="(510,3320)"/>
+    <wire from="(520,3220)" to="(850,3220)"/>
+    <wire from="(520,770)" to="(520,3220)"/>
+    <wire from="(530,3120)" to="(850,3120)"/>
+    <wire from="(530,770)" to="(530,3120)"/>
+    <wire from="(540,3020)" to="(850,3020)"/>
+    <wire from="(540,770)" to="(540,3020)"/>
+    <wire from="(550,2920)" to="(850,2920)"/>
+    <wire from="(550,770)" to="(550,2920)"/>
+    <wire from="(560,2820)" to="(850,2820)"/>
+    <wire from="(560,770)" to="(560,2820)"/>
+    <wire from="(570,2720)" to="(850,2720)"/>
+    <wire from="(570,770)" to="(570,2720)"/>
+    <wire from="(580,2620)" to="(850,2620)"/>
+    <wire from="(580,770)" to="(580,2620)"/>
+    <wire from="(590,2520)" to="(850,2520)"/>
+    <wire from="(590,770)" to="(590,2520)"/>
+    <wire from="(600,2420)" to="(850,2420)"/>
+    <wire from="(600,770)" to="(600,2420)"/>
+    <wire from="(610,2320)" to="(850,2320)"/>
+    <wire from="(610,770)" to="(610,2320)"/>
+    <wire from="(620,2220)" to="(850,2220)"/>
+    <wire from="(620,770)" to="(620,2220)"/>
+    <wire from="(630,2120)" to="(850,2120)"/>
+    <wire from="(630,770)" to="(630,2120)"/>
+    <wire from="(640,2020)" to="(850,2020)"/>
+    <wire from="(640,770)" to="(640,2020)"/>
+    <wire from="(650,1920)" to="(850,1920)"/>
+    <wire from="(650,770)" to="(650,1920)"/>
+    <wire from="(660,1820)" to="(850,1820)"/>
+    <wire from="(660,770)" to="(660,1820)"/>
+    <wire from="(670,1720)" to="(850,1720)"/>
+    <wire from="(670,770)" to="(670,1720)"/>
+    <wire from="(680,1620)" to="(850,1620)"/>
+    <wire from="(680,770)" to="(680,1620)"/>
+    <wire from="(690,1520)" to="(850,1520)"/>
+    <wire from="(690,770)" to="(690,1520)"/>
+    <wire from="(700,1420)" to="(850,1420)"/>
+    <wire from="(700,770)" to="(700,1420)"/>
+    <wire from="(710,1320)" to="(850,1320)"/>
+    <wire from="(710,770)" to="(710,1320)"/>
+    <wire from="(720,1220)" to="(850,1220)"/>
+    <wire from="(720,770)" to="(720,1220)"/>
+    <wire from="(730,1120)" to="(850,1120)"/>
+    <wire from="(730,770)" to="(730,1120)"/>
+    <wire from="(740,1020)" to="(850,1020)"/>
+    <wire from="(740,770)" to="(740,1020)"/>
+    <wire from="(750,770)" to="(750,920)"/>
+    <wire from="(750,920)" to="(850,920)"/>
+    <wire from="(780,1060)" to="(780,1160)"/>
+    <wire from="(780,1060)" to="(850,1060)"/>
+    <wire from="(780,1160)" to="(780,1260)"/>
+    <wire from="(780,1160)" to="(850,1160)"/>
+    <wire from="(780,1260)" to="(780,1360)"/>
+    <wire from="(780,1260)" to="(850,1260)"/>
+    <wire from="(780,1360)" to="(780,1460)"/>
+    <wire from="(780,1360)" to="(850,1360)"/>
+    <wire from="(780,1460)" to="(780,1560)"/>
+    <wire from="(780,1460)" to="(850,1460)"/>
+    <wire from="(780,1560)" to="(780,1660)"/>
+    <wire from="(780,1560)" to="(850,1560)"/>
+    <wire from="(780,1660)" to="(780,1760)"/>
+    <wire from="(780,1660)" to="(850,1660)"/>
+    <wire from="(780,1760)" to="(780,1860)"/>
+    <wire from="(780,1760)" to="(850,1760)"/>
+    <wire from="(780,1860)" to="(780,1960)"/>
+    <wire from="(780,1860)" to="(850,1860)"/>
+    <wire from="(780,1960)" to="(780,2060)"/>
+    <wire from="(780,1960)" to="(850,1960)"/>
+    <wire from="(780,2060)" to="(780,2160)"/>
+    <wire from="(780,2060)" to="(850,2060)"/>
+    <wire from="(780,2160)" to="(780,2260)"/>
+    <wire from="(780,2160)" to="(850,2160)"/>
+    <wire from="(780,2260)" to="(780,2360)"/>
+    <wire from="(780,2260)" to="(850,2260)"/>
+    <wire from="(780,2360)" to="(780,2460)"/>
+    <wire from="(780,2360)" to="(850,2360)"/>
+    <wire from="(780,2460)" to="(780,2560)"/>
+    <wire from="(780,2460)" to="(850,2460)"/>
+    <wire from="(780,2560)" to="(780,2660)"/>
+    <wire from="(780,2560)" to="(850,2560)"/>
+    <wire from="(780,2660)" to="(780,2760)"/>
+    <wire from="(780,2660)" to="(850,2660)"/>
+    <wire from="(780,2760)" to="(780,2860)"/>
+    <wire from="(780,2760)" to="(850,2760)"/>
+    <wire from="(780,2860)" to="(780,2960)"/>
+    <wire from="(780,2860)" to="(850,2860)"/>
+    <wire from="(780,2960)" to="(780,3060)"/>
+    <wire from="(780,2960)" to="(850,2960)"/>
+    <wire from="(780,3060)" to="(780,3160)"/>
+    <wire from="(780,3060)" to="(850,3060)"/>
+    <wire from="(780,3160)" to="(780,3260)"/>
+    <wire from="(780,3160)" to="(850,3160)"/>
+    <wire from="(780,3260)" to="(780,3360)"/>
+    <wire from="(780,3260)" to="(850,3260)"/>
+    <wire from="(780,3360)" to="(780,3460)"/>
+    <wire from="(780,3360)" to="(850,3360)"/>
+    <wire from="(780,3460)" to="(780,3560)"/>
+    <wire from="(780,3460)" to="(850,3460)"/>
+    <wire from="(780,3560)" to="(780,3660)"/>
+    <wire from="(780,3560)" to="(850,3560)"/>
+    <wire from="(780,3660)" to="(780,3760)"/>
+    <wire from="(780,3660)" to="(850,3660)"/>
+    <wire from="(780,3760)" to="(780,3860)"/>
+    <wire from="(780,3760)" to="(850,3760)"/>
+    <wire from="(780,3860)" to="(780,3960)"/>
+    <wire from="(780,3860)" to="(850,3860)"/>
+    <wire from="(780,3960)" to="(850,3960)"/>
+    <wire from="(780,680)" to="(780,860)"/>
+    <wire from="(780,860)" to="(780,960)"/>
+    <wire from="(780,860)" to="(850,860)"/>
+    <wire from="(780,960)" to="(780,1060)"/>
+    <wire from="(780,960)" to="(850,960)"/>
+    <wire from="(790,1000)" to="(790,1100)"/>
+    <wire from="(790,1000)" to="(850,1000)"/>
+    <wire from="(790,1100)" to="(790,1200)"/>
+    <wire from="(790,1100)" to="(850,1100)"/>
+    <wire from="(790,1200)" to="(790,1300)"/>
+    <wire from="(790,1200)" to="(850,1200)"/>
+    <wire from="(790,1300)" to="(790,1400)"/>
+    <wire from="(790,1300)" to="(850,1300)"/>
+    <wire from="(790,1400)" to="(790,1500)"/>
+    <wire from="(790,1400)" to="(850,1400)"/>
+    <wire from="(790,1500)" to="(790,1600)"/>
+    <wire from="(790,1500)" to="(850,1500)"/>
+    <wire from="(790,1600)" to="(790,1700)"/>
+    <wire from="(790,1600)" to="(850,1600)"/>
+    <wire from="(790,1700)" to="(790,1800)"/>
+    <wire from="(790,1700)" to="(850,1700)"/>
+    <wire from="(790,1800)" to="(790,1900)"/>
+    <wire from="(790,1800)" to="(850,1800)"/>
+    <wire from="(790,1900)" to="(790,2000)"/>
+    <wire from="(790,1900)" to="(850,1900)"/>
+    <wire from="(790,2000)" to="(790,2100)"/>
+    <wire from="(790,2000)" to="(850,2000)"/>
+    <wire from="(790,2100)" to="(790,2200)"/>
+    <wire from="(790,2100)" to="(850,2100)"/>
+    <wire from="(790,2200)" to="(790,2300)"/>
+    <wire from="(790,2200)" to="(850,2200)"/>
+    <wire from="(790,2300)" to="(790,2400)"/>
+    <wire from="(790,2300)" to="(850,2300)"/>
+    <wire from="(790,2400)" to="(790,2500)"/>
+    <wire from="(790,2400)" to="(850,2400)"/>
+    <wire from="(790,2500)" to="(790,2600)"/>
+    <wire from="(790,2500)" to="(850,2500)"/>
+    <wire from="(790,2600)" to="(790,2700)"/>
+    <wire from="(790,2600)" to="(850,2600)"/>
+    <wire from="(790,2700)" to="(790,2800)"/>
+    <wire from="(790,2700)" to="(850,2700)"/>
+    <wire from="(790,2800)" to="(790,2900)"/>
+    <wire from="(790,2800)" to="(850,2800)"/>
+    <wire from="(790,2900)" to="(790,3000)"/>
+    <wire from="(790,2900)" to="(850,2900)"/>
+    <wire from="(790,3000)" to="(790,3100)"/>
+    <wire from="(790,3000)" to="(850,3000)"/>
+    <wire from="(790,3100)" to="(790,3200)"/>
+    <wire from="(790,3100)" to="(850,3100)"/>
+    <wire from="(790,3200)" to="(790,3300)"/>
+    <wire from="(790,3200)" to="(850,3200)"/>
+    <wire from="(790,3300)" to="(790,3400)"/>
+    <wire from="(790,3300)" to="(850,3300)"/>
+    <wire from="(790,3400)" to="(790,3500)"/>
+    <wire from="(790,3400)" to="(850,3400)"/>
+    <wire from="(790,3500)" to="(790,3600)"/>
+    <wire from="(790,3500)" to="(850,3500)"/>
+    <wire from="(790,3600)" to="(790,3700)"/>
+    <wire from="(790,3600)" to="(850,3600)"/>
+    <wire from="(790,3700)" to="(790,3800)"/>
+    <wire from="(790,3700)" to="(850,3700)"/>
+    <wire from="(790,3800)" to="(790,3900)"/>
+    <wire from="(790,3800)" to="(850,3800)"/>
+    <wire from="(790,3900)" to="(850,3900)"/>
+    <wire from="(790,630)" to="(790,900)"/>
+    <wire from="(790,900)" to="(790,1000)"/>
+    <wire from="(790,900)" to="(850,900)"/>
+    <wire from="(800,1040)" to="(800,1140)"/>
+    <wire from="(800,1040)" to="(850,1040)"/>
+    <wire from="(800,1140)" to="(800,1240)"/>
+    <wire from="(800,1140)" to="(850,1140)"/>
+    <wire from="(800,1240)" to="(800,1340)"/>
+    <wire from="(800,1240)" to="(850,1240)"/>
+    <wire from="(800,1340)" to="(800,1440)"/>
+    <wire from="(800,1340)" to="(850,1340)"/>
+    <wire from="(800,1440)" to="(800,1540)"/>
+    <wire from="(800,1440)" to="(850,1440)"/>
+    <wire from="(800,1540)" to="(800,1640)"/>
+    <wire from="(800,1540)" to="(850,1540)"/>
+    <wire from="(800,1640)" to="(800,1740)"/>
+    <wire from="(800,1640)" to="(850,1640)"/>
+    <wire from="(800,1740)" to="(800,1840)"/>
+    <wire from="(800,1740)" to="(850,1740)"/>
+    <wire from="(800,1840)" to="(800,1940)"/>
+    <wire from="(800,1840)" to="(850,1840)"/>
+    <wire from="(800,1940)" to="(800,2040)"/>
+    <wire from="(800,1940)" to="(850,1940)"/>
+    <wire from="(800,2040)" to="(800,2140)"/>
+    <wire from="(800,2040)" to="(850,2040)"/>
+    <wire from="(800,2140)" to="(800,2240)"/>
+    <wire from="(800,2140)" to="(850,2140)"/>
+    <wire from="(800,2240)" to="(800,2340)"/>
+    <wire from="(800,2240)" to="(850,2240)"/>
+    <wire from="(800,2340)" to="(800,2440)"/>
+    <wire from="(800,2340)" to="(850,2340)"/>
+    <wire from="(800,2440)" to="(800,2540)"/>
+    <wire from="(800,2440)" to="(850,2440)"/>
+    <wire from="(800,2540)" to="(800,2640)"/>
+    <wire from="(800,2540)" to="(850,2540)"/>
+    <wire from="(800,2640)" to="(800,2740)"/>
+    <wire from="(800,2640)" to="(850,2640)"/>
+    <wire from="(800,2740)" to="(800,2840)"/>
+    <wire from="(800,2740)" to="(850,2740)"/>
+    <wire from="(800,2840)" to="(800,2940)"/>
+    <wire from="(800,2840)" to="(850,2840)"/>
+    <wire from="(800,2940)" to="(800,3040)"/>
+    <wire from="(800,2940)" to="(850,2940)"/>
+    <wire from="(800,3040)" to="(800,3140)"/>
+    <wire from="(800,3040)" to="(850,3040)"/>
+    <wire from="(800,3140)" to="(800,3240)"/>
+    <wire from="(800,3140)" to="(850,3140)"/>
+    <wire from="(800,3240)" to="(800,3340)"/>
+    <wire from="(800,3240)" to="(850,3240)"/>
+    <wire from="(800,3340)" to="(800,3440)"/>
+    <wire from="(800,3340)" to="(850,3340)"/>
+    <wire from="(800,3440)" to="(800,3540)"/>
+    <wire from="(800,3440)" to="(850,3440)"/>
+    <wire from="(800,3540)" to="(800,3640)"/>
+    <wire from="(800,3540)" to="(850,3540)"/>
+    <wire from="(800,3640)" to="(800,3740)"/>
+    <wire from="(800,3640)" to="(850,3640)"/>
+    <wire from="(800,3740)" to="(800,3840)"/>
+    <wire from="(800,3740)" to="(850,3740)"/>
+    <wire from="(800,3840)" to="(800,3940)"/>
+    <wire from="(800,3840)" to="(850,3840)"/>
+    <wire from="(800,3940)" to="(850,3940)"/>
+    <wire from="(800,560)" to="(850,560)"/>
+    <wire from="(800,580)" to="(800,840)"/>
+    <wire from="(800,840)" to="(800,940)"/>
+    <wire from="(800,840)" to="(850,840)"/>
+    <wire from="(800,940)" to="(800,1040)"/>
+    <wire from="(800,940)" to="(850,940)"/>
+    <wire from="(840,820)" to="(850,820)"/>
+    <wire from="(850,3940)" to="(860,3940)"/>
+    <wire from="(850,560)" to="(850,800)"/>
+  </circuit>
+  <circuit name="IF_ID_DIV">
+    <a name="appearance" val="evolution"/>
+    <a name="circuit" val="IF_ID_DIV"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(270,270)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="clock"/>
+    </comp>
+    <comp lib="0" loc="(270,290)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="clear"/>
+    </comp>
+    <comp lib="0" loc="(330,340)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="instruction_address_in"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(330,420)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="instruction_data_in"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(510,250)" name="Constant"/>
+    <comp lib="0" loc="(800,230)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="instruction_address_out"/>
+      <a name="output" val="true"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(800,340)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="instruction_data_out"/>
+      <a name="output" val="true"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp loc="(770,230)" name="reg32b">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp loc="(770,340)" name="reg32b">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <wire from="(270,270)" to="(520,270)"/>
+    <wire from="(270,290)" to="(530,290)"/>
+    <wire from="(330,340)" to="(360,340)"/>
+    <wire from="(330,420)" to="(370,420)"/>
+    <wire from="(360,230)" to="(360,340)"/>
+    <wire from="(360,230)" to="(550,230)"/>
+    <wire from="(370,340)" to="(370,420)"/>
+    <wire from="(370,340)" to="(550,340)"/>
+    <wire from="(510,250)" to="(510,360)"/>
+    <wire from="(510,250)" to="(550,250)"/>
+    <wire from="(510,360)" to="(550,360)"/>
+    <wire from="(520,270)" to="(520,380)"/>
+    <wire from="(520,270)" to="(550,270)"/>
+    <wire from="(520,380)" to="(550,380)"/>
+    <wire from="(530,290)" to="(530,400)"/>
+    <wire from="(530,290)" to="(550,290)"/>
+    <wire from="(530,400)" to="(550,400)"/>
+    <wire from="(770,230)" to="(800,230)"/>
+    <wire from="(770,340)" to="(800,340)"/>
+  </circuit>
+  <circuit name="ID_EX_DIV">
+    <a name="appearance" val="evolution"/>
+    <a name="circuit" val="ID_EX_DIV"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(300,1150)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="register_file_read_address_0_in"/>
+      <a name="width" val="5"/>
+    </comp>
+    <comp lib="0" loc="(300,1170)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="register_file_read_address_1_in"/>
+      <a name="width" val="5"/>
+    </comp>
+    <comp lib="0" loc="(300,1270)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="register_file_output_0_in"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(300,1350)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="register_file_output_1_in"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(300,1430)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="immediate_in"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(300,1510)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="instruction_address_in"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(300,20)" name="Constant"/>
+    <comp lib="0" loc="(300,250)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="alu_operation_in"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(300,270)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="alu_branch_in"/>
+    </comp>
+    <comp lib="0" loc="(300,290)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="alu_branch_control_in"/>
+      <a name="width" val="3"/>
+    </comp>
+    <comp lib="0" loc="(300,310)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="mux1_sel_in"/>
+    </comp>
+    <comp lib="0" loc="(300,330)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="JTU_mux_sel_in"/>
+    </comp>
+    <comp lib="0" loc="(300,40)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="clock"/>
+    </comp>
+    <comp lib="0" loc="(300,60)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="clear"/>
+    </comp>
+    <comp lib="0" loc="(300,940)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="mux0_sel_in"/>
+      <a name="width" val="2"/>
+    </comp>
+    <comp lib="0" loc="(300,960)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="reg_file_write_in"/>
+    </comp>
+    <comp lib="0" loc="(300,980)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="reg_file_write_address_in"/>
+      <a name="width" val="5"/>
+    </comp>
+    <comp lib="0" loc="(310,610)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="data_format_in"/>
+      <a name="width" val="3"/>
+    </comp>
+    <comp lib="0" loc="(310,630)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="datamem_write_in"/>
+    </comp>
+    <comp lib="0" loc="(310,650)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="jump_flag_in"/>
+    </comp>
+    <comp lib="0" loc="(890,110)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="ALU_branch_out"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(890,1120)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="register_file_read_address_0_out"/>
+      <a name="output" val="true"/>
+      <a name="width" val="5"/>
+    </comp>
+    <comp lib="0" loc="(890,1140)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="register_file_read_address_1_out"/>
+      <a name="output" val="true"/>
+      <a name="width" val="5"/>
+    </comp>
+    <comp lib="0" loc="(890,1270)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="register_file_output_0_out"/>
+      <a name="output" val="true"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(890,130)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="ALU_branch_control_out"/>
+      <a name="output" val="true"/>
+      <a name="width" val="3"/>
+    </comp>
+    <comp lib="0" loc="(890,1350)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="register_file_output_1_out"/>
+      <a name="output" val="true"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(890,1430)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="immediate_out"/>
+      <a name="output" val="true"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(890,150)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="mux1_sel_out"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(890,1510)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="instruction_address_out"/>
+      <a name="output" val="true"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(890,170)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="JTU_mux_sel_out"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(890,610)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="data_format_out"/>
+      <a name="output" val="true"/>
+      <a name="width" val="3"/>
+    </comp>
+    <comp lib="0" loc="(890,630)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="datamem_write_out"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(890,650)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="jump_flag_out"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(890,90)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="ALU_operation_out"/>
+      <a name="output" val="true"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(890,940)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="mux0_sel_out"/>
+      <a name="output" val="true"/>
+      <a name="width" val="2"/>
+    </comp>
+    <comp lib="0" loc="(890,960)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="reg_file_write_out"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(890,980)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="reg_file_write_address_out"/>
+      <a name="output" val="true"/>
+      <a name="width" val="5"/>
+    </comp>
+    <comp loc="(750,1040)" name="reg1b">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp loc="(750,1140)" name="reg5b">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp loc="(750,1270)" name="reg32b">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="labelvisible" val="true"/>
+    </comp>
+    <comp loc="(750,1370)" name="reg32b">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="labelvisible" val="true"/>
+    </comp>
+    <comp loc="(750,1470)" name="reg32b">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="labelvisible" val="true"/>
+    </comp>
+    <comp loc="(750,1570)" name="reg32b">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp loc="(750,1690)" name="reg5b">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp loc="(750,1790)" name="reg5b">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp loc="(750,190)" name="reg1b">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="labelvisible" val="true"/>
+    </comp>
+    <comp loc="(750,290)" name="reg3b">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp loc="(750,390)" name="reg1b">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="labelvisible" val="true"/>
+    </comp>
+    <comp loc="(750,490)" name="reg1b">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="labelvisible" val="true"/>
+    </comp>
+    <comp loc="(750,610)" name="reg3b">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp loc="(750,710)" name="reg1b">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="labelvisible" val="true"/>
+    </comp>
+    <comp loc="(750,810)" name="reg1b">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="labelvisible" val="true"/>
+    </comp>
+    <comp loc="(750,90)" name="reg4b">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp loc="(750,940)" name="reg2b">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <wire from="(300,1150)" to="(490,1150)"/>
+    <wire from="(300,1170)" to="(480,1170)"/>
+    <wire from="(300,1270)" to="(530,1270)"/>
+    <wire from="(300,1350)" to="(470,1350)"/>
+    <wire from="(300,1430)" to="(470,1430)"/>
+    <wire from="(300,1510)" to="(470,1510)"/>
+    <wire from="(300,20)" to="(520,20)"/>
+    <wire from="(300,250)" to="(370,250)"/>
+    <wire from="(300,270)" to="(380,270)"/>
+    <wire from="(300,290)" to="(530,290)"/>
+    <wire from="(300,310)" to="(490,310)"/>
+    <wire from="(300,330)" to="(480,330)"/>
+    <wire from="(300,40)" to="(510,40)"/>
+    <wire from="(300,60)" to="(500,60)"/>
+    <wire from="(300,940)" to="(530,940)"/>
+    <wire from="(300,960)" to="(490,960)"/>
+    <wire from="(300,980)" to="(480,980)"/>
+    <wire from="(310,610)" to="(530,610)"/>
+    <wire from="(310,630)" to="(490,630)"/>
+    <wire from="(310,650)" to="(480,650)"/>
+    <wire from="(370,90)" to="(370,250)"/>
+    <wire from="(370,90)" to="(530,90)"/>
+    <wire from="(380,190)" to="(380,270)"/>
+    <wire from="(380,190)" to="(530,190)"/>
+    <wire from="(470,1350)" to="(470,1370)"/>
+    <wire from="(470,1370)" to="(530,1370)"/>
+    <wire from="(470,1430)" to="(470,1470)"/>
+    <wire from="(470,1470)" to="(530,1470)"/>
+    <wire from="(470,1510)" to="(470,1570)"/>
+    <wire from="(470,1570)" to="(530,1570)"/>
+    <wire from="(480,1140)" to="(530,1140)"/>
+    <wire from="(480,1170)" to="(480,1790)"/>
+    <wire from="(480,1790)" to="(530,1790)"/>
+    <wire from="(480,330)" to="(480,490)"/>
+    <wire from="(480,490)" to="(530,490)"/>
+    <wire from="(480,650)" to="(480,810)"/>
+    <wire from="(480,810)" to="(530,810)"/>
+    <wire from="(480,980)" to="(480,1140)"/>
+    <wire from="(490,1040)" to="(530,1040)"/>
+    <wire from="(490,1150)" to="(490,1690)"/>
+    <wire from="(490,1690)" to="(530,1690)"/>
+    <wire from="(490,310)" to="(490,390)"/>
+    <wire from="(490,390)" to="(530,390)"/>
+    <wire from="(490,630)" to="(490,710)"/>
+    <wire from="(490,710)" to="(530,710)"/>
+    <wire from="(490,960)" to="(490,1040)"/>
+    <wire from="(500,1000)" to="(500,1100)"/>
+    <wire from="(500,1000)" to="(530,1000)"/>
+    <wire from="(500,1100)" to="(500,1200)"/>
+    <wire from="(500,1100)" to="(530,1100)"/>
+    <wire from="(500,1200)" to="(500,1330)"/>
+    <wire from="(500,1200)" to="(530,1200)"/>
+    <wire from="(500,1330)" to="(500,1430)"/>
+    <wire from="(500,1330)" to="(530,1330)"/>
+    <wire from="(500,1430)" to="(500,1530)"/>
+    <wire from="(500,1430)" to="(530,1430)"/>
+    <wire from="(500,150)" to="(500,250)"/>
+    <wire from="(500,150)" to="(530,150)"/>
+    <wire from="(500,1530)" to="(500,1630)"/>
+    <wire from="(500,1530)" to="(530,1530)"/>
+    <wire from="(500,1630)" to="(500,1750)"/>
+    <wire from="(500,1630)" to="(530,1630)"/>
+    <wire from="(500,1750)" to="(500,1850)"/>
+    <wire from="(500,1750)" to="(530,1750)"/>
+    <wire from="(500,1850)" to="(530,1850)"/>
+    <wire from="(500,250)" to="(500,350)"/>
+    <wire from="(500,250)" to="(530,250)"/>
+    <wire from="(500,350)" to="(500,450)"/>
+    <wire from="(500,350)" to="(530,350)"/>
+    <wire from="(500,450)" to="(500,550)"/>
+    <wire from="(500,450)" to="(530,450)"/>
+    <wire from="(500,550)" to="(500,670)"/>
+    <wire from="(500,550)" to="(530,550)"/>
+    <wire from="(500,60)" to="(500,150)"/>
+    <wire from="(500,670)" to="(500,770)"/>
+    <wire from="(500,670)" to="(530,670)"/>
+    <wire from="(500,770)" to="(500,870)"/>
+    <wire from="(500,770)" to="(530,770)"/>
+    <wire from="(500,870)" to="(500,1000)"/>
+    <wire from="(500,870)" to="(530,870)"/>
+    <wire from="(510,1080)" to="(510,1180)"/>
+    <wire from="(510,1080)" to="(530,1080)"/>
+    <wire from="(510,1180)" to="(510,1310)"/>
+    <wire from="(510,1180)" to="(530,1180)"/>
+    <wire from="(510,130)" to="(510,230)"/>
+    <wire from="(510,130)" to="(530,130)"/>
+    <wire from="(510,1310)" to="(510,1410)"/>
+    <wire from="(510,1310)" to="(530,1310)"/>
+    <wire from="(510,1410)" to="(510,1510)"/>
+    <wire from="(510,1410)" to="(530,1410)"/>
+    <wire from="(510,1510)" to="(510,1610)"/>
+    <wire from="(510,1510)" to="(530,1510)"/>
+    <wire from="(510,1610)" to="(510,1730)"/>
+    <wire from="(510,1610)" to="(530,1610)"/>
+    <wire from="(510,1730)" to="(510,1830)"/>
+    <wire from="(510,1730)" to="(530,1730)"/>
+    <wire from="(510,1830)" to="(530,1830)"/>
+    <wire from="(510,230)" to="(510,330)"/>
+    <wire from="(510,230)" to="(530,230)"/>
+    <wire from="(510,330)" to="(510,430)"/>
+    <wire from="(510,330)" to="(530,330)"/>
+    <wire from="(510,40)" to="(510,130)"/>
+    <wire from="(510,430)" to="(510,530)"/>
+    <wire from="(510,430)" to="(530,430)"/>
+    <wire from="(510,530)" to="(510,650)"/>
+    <wire from="(510,530)" to="(530,530)"/>
+    <wire from="(510,650)" to="(510,750)"/>
+    <wire from="(510,650)" to="(530,650)"/>
+    <wire from="(510,750)" to="(510,850)"/>
+    <wire from="(510,750)" to="(530,750)"/>
+    <wire from="(510,850)" to="(510,980)"/>
+    <wire from="(510,850)" to="(530,850)"/>
+    <wire from="(510,980)" to="(510,1080)"/>
+    <wire from="(510,980)" to="(530,980)"/>
+    <wire from="(520,1060)" to="(520,1160)"/>
+    <wire from="(520,1060)" to="(530,1060)"/>
+    <wire from="(520,110)" to="(520,210)"/>
+    <wire from="(520,110)" to="(530,110)"/>
+    <wire from="(520,1160)" to="(520,1290)"/>
+    <wire from="(520,1160)" to="(530,1160)"/>
+    <wire from="(520,1290)" to="(520,1390)"/>
+    <wire from="(520,1290)" to="(530,1290)"/>
+    <wire from="(520,1390)" to="(520,1490)"/>
+    <wire from="(520,1390)" to="(530,1390)"/>
+    <wire from="(520,1490)" to="(520,1590)"/>
+    <wire from="(520,1490)" to="(530,1490)"/>
+    <wire from="(520,1590)" to="(520,1710)"/>
+    <wire from="(520,1590)" to="(530,1590)"/>
+    <wire from="(520,1710)" to="(520,1810)"/>
+    <wire from="(520,1710)" to="(530,1710)"/>
+    <wire from="(520,1810)" to="(530,1810)"/>
+    <wire from="(520,20)" to="(520,110)"/>
+    <wire from="(520,210)" to="(520,310)"/>
+    <wire from="(520,210)" to="(530,210)"/>
+    <wire from="(520,310)" to="(520,410)"/>
+    <wire from="(520,310)" to="(530,310)"/>
+    <wire from="(520,410)" to="(520,510)"/>
+    <wire from="(520,410)" to="(530,410)"/>
+    <wire from="(520,510)" to="(520,630)"/>
+    <wire from="(520,510)" to="(530,510)"/>
+    <wire from="(520,630)" to="(520,730)"/>
+    <wire from="(520,630)" to="(530,630)"/>
+    <wire from="(520,730)" to="(520,830)"/>
+    <wire from="(520,730)" to="(530,730)"/>
+    <wire from="(520,830)" to="(520,960)"/>
+    <wire from="(520,830)" to="(530,830)"/>
+    <wire from="(520,960)" to="(520,1060)"/>
+    <wire from="(520,960)" to="(530,960)"/>
+    <wire from="(750,110)" to="(750,190)"/>
+    <wire from="(750,110)" to="(890,110)"/>
+    <wire from="(750,1140)" to="(760,1140)"/>
+    <wire from="(750,1270)" to="(890,1270)"/>
+    <wire from="(750,1350)" to="(750,1370)"/>
+    <wire from="(750,1350)" to="(890,1350)"/>
+    <wire from="(750,1430)" to="(750,1470)"/>
+    <wire from="(750,1430)" to="(890,1430)"/>
+    <wire from="(750,1510)" to="(750,1570)"/>
+    <wire from="(750,1510)" to="(890,1510)"/>
+    <wire from="(750,1690)" to="(850,1690)"/>
+    <wire from="(750,1790)" to="(860,1790)"/>
+    <wire from="(750,290)" to="(760,290)"/>
+    <wire from="(750,390)" to="(770,390)"/>
+    <wire from="(750,490)" to="(780,490)"/>
+    <wire from="(750,610)" to="(890,610)"/>
+    <wire from="(750,630)" to="(750,710)"/>
+    <wire from="(750,630)" to="(890,630)"/>
+    <wire from="(750,810)" to="(760,810)"/>
+    <wire from="(750,90)" to="(890,90)"/>
+    <wire from="(750,940)" to="(890,940)"/>
+    <wire from="(750,960)" to="(750,1040)"/>
+    <wire from="(750,960)" to="(890,960)"/>
+    <wire from="(760,130)" to="(760,290)"/>
+    <wire from="(760,130)" to="(890,130)"/>
+    <wire from="(760,650)" to="(760,810)"/>
+    <wire from="(760,650)" to="(890,650)"/>
+    <wire from="(760,980)" to="(760,1140)"/>
+    <wire from="(760,980)" to="(890,980)"/>
+    <wire from="(770,150)" to="(770,390)"/>
+    <wire from="(770,150)" to="(890,150)"/>
+    <wire from="(780,170)" to="(780,490)"/>
+    <wire from="(780,170)" to="(890,170)"/>
+    <wire from="(850,1120)" to="(850,1690)"/>
+    <wire from="(850,1120)" to="(890,1120)"/>
+    <wire from="(860,1140)" to="(860,1790)"/>
+    <wire from="(860,1140)" to="(890,1140)"/>
+  </circuit>
+  <circuit name="EX_MEM_DIV">
+    <a name="appearance" val="evolution"/>
+    <a name="circuit" val="EX_MEM_DIV"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(400,120)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="data_format_in"/>
+      <a name="width" val="3"/>
+    </comp>
+    <comp lib="0" loc="(400,140)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="datamem_write_in"/>
+    </comp>
+    <comp lib="0" loc="(400,160)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="jump_flag_in"/>
+    </comp>
+    <comp lib="0" loc="(400,40)" name="Constant"/>
+    <comp lib="0" loc="(400,460)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="mux0_sel_in"/>
+      <a name="width" val="2"/>
+    </comp>
+    <comp lib="0" loc="(400,480)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="reg_file_write_in"/>
+    </comp>
+    <comp lib="0" loc="(400,500)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="reg_file_write_address_in"/>
+      <a name="width" val="5"/>
+    </comp>
+    <comp lib="0" loc="(400,60)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="clock"/>
+    </comp>
+    <comp lib="0" loc="(400,790)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="ALU_output_in"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(400,80)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="clear"/>
+    </comp>
+    <comp lib="0" loc="(400,870)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="register_file_output_1_in"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(400,920)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="ALU_branch_response_in"/>
+    </comp>
+    <comp lib="0" loc="(400,970)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="instruction_address_in"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(790,120)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="data_format_out"/>
+      <a name="output" val="true"/>
+      <a name="width" val="3"/>
+    </comp>
+    <comp lib="0" loc="(790,140)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="datamem_write_out"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(790,160)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="jump_flag_out"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(790,460)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="mux0_sel_out"/>
+      <a name="output" val="true"/>
+      <a name="width" val="2"/>
+    </comp>
+    <comp lib="0" loc="(790,480)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="reg_file_write_out"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(790,500)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="reg_file_write_address_out"/>
+      <a name="output" val="true"/>
+      <a name="width" val="5"/>
+    </comp>
+    <comp lib="0" loc="(790,790)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="ALU_output_out"/>
+      <a name="output" val="true"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(790,870)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="register_file_output_1_out"/>
+      <a name="output" val="true"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(790,920)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="ALU_branch_response_out"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(790,970)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="instruction_address_out"/>
+      <a name="output" val="true"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp loc="(720,1090)" name="reg32b">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp loc="(720,120)" name="reg3b">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp loc="(720,220)" name="reg1b">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp loc="(720,320)" name="reg1b">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp loc="(720,460)" name="reg2b">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp loc="(720,560)" name="reg1b">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp loc="(720,660)" name="reg5b">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp loc="(720,790)" name="reg32b">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp loc="(720,890)" name="reg32b">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp loc="(720,990)" name="reg1b">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <wire from="(400,120)" to="(500,120)"/>
+    <wire from="(400,140)" to="(460,140)"/>
+    <wire from="(400,160)" to="(450,160)"/>
+    <wire from="(400,40)" to="(490,40)"/>
+    <wire from="(400,460)" to="(500,460)"/>
+    <wire from="(400,480)" to="(460,480)"/>
+    <wire from="(400,500)" to="(450,500)"/>
+    <wire from="(400,60)" to="(480,60)"/>
+    <wire from="(400,790)" to="(500,790)"/>
+    <wire from="(400,80)" to="(470,80)"/>
+    <wire from="(400,870)" to="(460,870)"/>
+    <wire from="(400,920)" to="(460,920)"/>
+    <wire from="(400,970)" to="(450,970)"/>
+    <wire from="(450,1090)" to="(500,1090)"/>
+    <wire from="(450,160)" to="(450,320)"/>
+    <wire from="(450,320)" to="(500,320)"/>
+    <wire from="(450,500)" to="(450,660)"/>
+    <wire from="(450,660)" to="(500,660)"/>
+    <wire from="(450,970)" to="(450,1090)"/>
+    <wire from="(460,140)" to="(460,220)"/>
+    <wire from="(460,220)" to="(500,220)"/>
+    <wire from="(460,480)" to="(460,560)"/>
+    <wire from="(460,560)" to="(500,560)"/>
+    <wire from="(460,870)" to="(460,890)"/>
+    <wire from="(460,890)" to="(500,890)"/>
+    <wire from="(460,920)" to="(460,990)"/>
+    <wire from="(460,990)" to="(500,990)"/>
+    <wire from="(470,1050)" to="(470,1150)"/>
+    <wire from="(470,1050)" to="(500,1050)"/>
+    <wire from="(470,1150)" to="(500,1150)"/>
+    <wire from="(470,180)" to="(470,280)"/>
+    <wire from="(470,180)" to="(500,180)"/>
+    <wire from="(470,280)" to="(470,380)"/>
+    <wire from="(470,280)" to="(500,280)"/>
+    <wire from="(470,380)" to="(470,520)"/>
+    <wire from="(470,380)" to="(500,380)"/>
+    <wire from="(470,520)" to="(470,620)"/>
+    <wire from="(470,520)" to="(500,520)"/>
+    <wire from="(470,620)" to="(470,720)"/>
+    <wire from="(470,620)" to="(500,620)"/>
+    <wire from="(470,720)" to="(470,850)"/>
+    <wire from="(470,720)" to="(500,720)"/>
+    <wire from="(470,80)" to="(470,180)"/>
+    <wire from="(470,850)" to="(470,950)"/>
+    <wire from="(470,850)" to="(500,850)"/>
+    <wire from="(470,950)" to="(470,1050)"/>
+    <wire from="(470,950)" to="(500,950)"/>
+    <wire from="(480,1030)" to="(480,1130)"/>
+    <wire from="(480,1030)" to="(500,1030)"/>
+    <wire from="(480,1130)" to="(500,1130)"/>
+    <wire from="(480,160)" to="(480,260)"/>
+    <wire from="(480,160)" to="(500,160)"/>
+    <wire from="(480,260)" to="(480,360)"/>
+    <wire from="(480,260)" to="(500,260)"/>
+    <wire from="(480,360)" to="(480,500)"/>
+    <wire from="(480,360)" to="(500,360)"/>
+    <wire from="(480,500)" to="(480,600)"/>
+    <wire from="(480,500)" to="(500,500)"/>
+    <wire from="(480,60)" to="(480,160)"/>
+    <wire from="(480,600)" to="(480,700)"/>
+    <wire from="(480,600)" to="(500,600)"/>
+    <wire from="(480,700)" to="(480,830)"/>
+    <wire from="(480,700)" to="(500,700)"/>
+    <wire from="(480,830)" to="(480,930)"/>
+    <wire from="(480,830)" to="(500,830)"/>
+    <wire from="(480,930)" to="(480,1030)"/>
+    <wire from="(480,930)" to="(500,930)"/>
+    <wire from="(490,1010)" to="(490,1110)"/>
+    <wire from="(490,1010)" to="(500,1010)"/>
+    <wire from="(490,1110)" to="(500,1110)"/>
+    <wire from="(490,140)" to="(490,240)"/>
+    <wire from="(490,140)" to="(500,140)"/>
+    <wire from="(490,240)" to="(490,340)"/>
+    <wire from="(490,240)" to="(500,240)"/>
+    <wire from="(490,340)" to="(490,480)"/>
+    <wire from="(490,340)" to="(500,340)"/>
+    <wire from="(490,40)" to="(490,140)"/>
+    <wire from="(490,480)" to="(490,580)"/>
+    <wire from="(490,480)" to="(500,480)"/>
+    <wire from="(490,580)" to="(490,680)"/>
+    <wire from="(490,580)" to="(500,580)"/>
+    <wire from="(490,680)" to="(490,810)"/>
+    <wire from="(490,680)" to="(500,680)"/>
+    <wire from="(490,810)" to="(490,910)"/>
+    <wire from="(490,810)" to="(500,810)"/>
+    <wire from="(490,910)" to="(490,1010)"/>
+    <wire from="(490,910)" to="(500,910)"/>
+    <wire from="(720,1090)" to="(730,1090)"/>
+    <wire from="(720,120)" to="(790,120)"/>
+    <wire from="(720,140)" to="(720,220)"/>
+    <wire from="(720,140)" to="(790,140)"/>
+    <wire from="(720,320)" to="(730,320)"/>
+    <wire from="(720,460)" to="(790,460)"/>
+    <wire from="(720,480)" to="(720,560)"/>
+    <wire from="(720,480)" to="(790,480)"/>
+    <wire from="(720,660)" to="(730,660)"/>
+    <wire from="(720,790)" to="(790,790)"/>
+    <wire from="(720,870)" to="(720,890)"/>
+    <wire from="(720,870)" to="(790,870)"/>
+    <wire from="(720,920)" to="(720,990)"/>
+    <wire from="(720,920)" to="(790,920)"/>
+    <wire from="(730,160)" to="(730,320)"/>
+    <wire from="(730,160)" to="(790,160)"/>
+    <wire from="(730,500)" to="(730,660)"/>
+    <wire from="(730,500)" to="(790,500)"/>
+    <wire from="(730,970)" to="(730,1090)"/>
+    <wire from="(730,970)" to="(790,970)"/>
+  </circuit>
+  <circuit name="MEM_WB_DIV">
+    <a name="appearance" val="evolution"/>
+    <a name="circuit" val="MEM_WB_DIV"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(410,100)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="mux0_sel_in"/>
+      <a name="width" val="2"/>
+    </comp>
+    <comp lib="0" loc="(410,120)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="reg_file_write_in"/>
+    </comp>
+    <comp lib="0" loc="(410,140)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="reg_file_write_address_in"/>
+      <a name="width" val="5"/>
+    </comp>
+    <comp lib="0" loc="(410,20)" name="Constant"/>
+    <comp lib="0" loc="(410,40)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="clock"/>
+    </comp>
+    <comp lib="0" loc="(410,430)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="ALU_output_in"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(410,510)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="datamem_output_in"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(410,590)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="instruction_address_in"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(410,60)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="clear"/>
+    </comp>
+    <comp lib="0" loc="(740,100)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="mux0_sel_out"/>
+      <a name="output" val="true"/>
+      <a name="width" val="2"/>
+    </comp>
+    <comp lib="0" loc="(740,120)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="reg_file_write_out"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(740,140)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="reg_file_write_address_out"/>
+      <a name="output" val="true"/>
+      <a name="width" val="5"/>
+    </comp>
+    <comp lib="0" loc="(740,430)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="ALU_output_out"/>
+      <a name="output" val="true"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(740,510)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="datamem_output_out"/>
+      <a name="output" val="true"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(740,590)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="instruction_address_out"/>
+      <a name="output" val="true"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp loc="(710,100)" name="reg2b">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp loc="(710,200)" name="reg1b">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp loc="(710,300)" name="reg5b">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp loc="(710,430)" name="reg32b">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp loc="(710,530)" name="reg32b">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp loc="(710,630)" name="reg32b">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <wire from="(410,100)" to="(490,100)"/>
+    <wire from="(410,120)" to="(450,120)"/>
+    <wire from="(410,140)" to="(440,140)"/>
+    <wire from="(410,20)" to="(480,20)"/>
+    <wire from="(410,40)" to="(470,40)"/>
+    <wire from="(410,430)" to="(490,430)"/>
+    <wire from="(410,510)" to="(440,510)"/>
+    <wire from="(410,590)" to="(440,590)"/>
+    <wire from="(410,60)" to="(460,60)"/>
+    <wire from="(440,140)" to="(440,300)"/>
+    <wire from="(440,300)" to="(490,300)"/>
+    <wire from="(440,510)" to="(440,530)"/>
+    <wire from="(440,530)" to="(490,530)"/>
+    <wire from="(440,590)" to="(440,630)"/>
+    <wire from="(440,630)" to="(490,630)"/>
+    <wire from="(450,120)" to="(450,200)"/>
+    <wire from="(450,200)" to="(490,200)"/>
+    <wire from="(460,160)" to="(460,260)"/>
+    <wire from="(460,160)" to="(490,160)"/>
+    <wire from="(460,260)" to="(460,360)"/>
+    <wire from="(460,260)" to="(490,260)"/>
+    <wire from="(460,360)" to="(460,490)"/>
+    <wire from="(460,360)" to="(490,360)"/>
+    <wire from="(460,490)" to="(460,590)"/>
+    <wire from="(460,490)" to="(490,490)"/>
+    <wire from="(460,590)" to="(460,690)"/>
+    <wire from="(460,590)" to="(490,590)"/>
+    <wire from="(460,60)" to="(460,160)"/>
+    <wire from="(460,690)" to="(490,690)"/>
+    <wire from="(470,140)" to="(470,240)"/>
+    <wire from="(470,140)" to="(490,140)"/>
+    <wire from="(470,240)" to="(470,340)"/>
+    <wire from="(470,240)" to="(490,240)"/>
+    <wire from="(470,340)" to="(470,470)"/>
+    <wire from="(470,340)" to="(490,340)"/>
+    <wire from="(470,40)" to="(470,140)"/>
+    <wire from="(470,470)" to="(470,570)"/>
+    <wire from="(470,470)" to="(490,470)"/>
+    <wire from="(470,570)" to="(470,670)"/>
+    <wire from="(470,570)" to="(490,570)"/>
+    <wire from="(470,670)" to="(490,670)"/>
+    <wire from="(480,120)" to="(480,220)"/>
+    <wire from="(480,120)" to="(490,120)"/>
+    <wire from="(480,20)" to="(480,120)"/>
+    <wire from="(480,220)" to="(480,320)"/>
+    <wire from="(480,220)" to="(490,220)"/>
+    <wire from="(480,320)" to="(480,450)"/>
+    <wire from="(480,320)" to="(490,320)"/>
+    <wire from="(480,450)" to="(480,550)"/>
+    <wire from="(480,450)" to="(490,450)"/>
+    <wire from="(480,550)" to="(480,650)"/>
+    <wire from="(480,550)" to="(490,550)"/>
+    <wire from="(480,650)" to="(490,650)"/>
+    <wire from="(710,100)" to="(740,100)"/>
+    <wire from="(710,120)" to="(710,200)"/>
+    <wire from="(710,120)" to="(740,120)"/>
+    <wire from="(710,300)" to="(720,300)"/>
+    <wire from="(710,430)" to="(740,430)"/>
+    <wire from="(710,510)" to="(710,530)"/>
+    <wire from="(710,510)" to="(740,510)"/>
+    <wire from="(710,590)" to="(710,630)"/>
+    <wire from="(710,590)" to="(740,590)"/>
+    <wire from="(720,140)" to="(720,300)"/>
+    <wire from="(720,140)" to="(740,140)"/>
+  </circuit>
+  <circuit name="IM">
+    <a name="appearance" val="evolution"/>
+    <a name="circuit" val="IM"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(390,140)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="address"/>
+      <a name="width" val="24"/>
+    </comp>
+    <comp lib="0" loc="(390,200)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="clock"/>
+    </comp>
+    <comp lib="0" loc="(390,280)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="Instruction_Fill"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(430,190)" name="Constant"/>
+    <comp lib="0" loc="(740,220)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="instruction_out"/>
+      <a name="output" val="true"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="4" loc="(480,130)" name="RAM">
+      <a name="addrWidth" val="24"/>
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="dataWidth" val="32"/>
+    </comp>
+    <wire from="(390,140)" to="(480,140)"/>
+    <wire from="(390,200)" to="(480,200)"/>
+    <wire from="(390,280)" to="(450,280)"/>
+    <wire from="(430,190)" to="(470,190)"/>
+    <wire from="(450,220)" to="(450,280)"/>
+    <wire from="(450,220)" to="(480,220)"/>
+    <wire from="(470,180)" to="(470,190)"/>
+    <wire from="(470,180)" to="(480,180)"/>
+    <wire from="(470,190)" to="(480,190)"/>
+    <wire from="(720,220)" to="(740,220)"/>
+  </circuit>
+  <vhdl name="Control">--------------------------------------------------------------------------------&#13;
+-- Project :&#13;
+-- File    :&#13;
+-- Autor   :&#13;
+-- Date    :&#13;
+--&#13;
+--------------------------------------------------------------------------------&#13;
+-- Description :&#13;
+--&#13;
+--------------------------------------------------------------------------------&#13;
+&#13;
+LIBRARY ieee;&#13;
+USE ieee.std_logic_1164.all;&#13;
+&#13;
+ENTITY Control IS&#13;
+  PORT (&#13;
+  ------------------------------------------------------------------------------&#13;
+  --Insert input ports below&#13;
+    I    : IN  std_logic_vector(6 DOWNTO 0); -- input vector example&#13;
+  ------------------------------------------------------------------------------&#13;
+  --Insert output ports below&#13;
+    ALUSrc        : OUT std_logic;                    -- output bit example&#13;
+    MemtoReg      : OUT std_logic;  -- output vector example&#13;
+    RegWrite      : OUT std_logic;
+    MemRead	   : OUT std_logic;
+    MemWrite      : OUT std_logic;
+    Branch        : OUT std_logic;
+    ALUOp1	   : OUT std_logic;
+    ALUOp0	   : OUT std_logic
+    
+    );&#13;
+END Control;&#13;
+&#13;
+--------------------------------------------------------------------------------&#13;
+--Complete your VHDL description below&#13;
+--------------------------------------------------------------------------------&#13;
+&#13;
+ARCHITECTURE TypeArchitecture OF Control IS&#13;
+&#13;
+BEGIN&#13;
+&#13;
+with I select ALUSrc &lt;=
+		'0' when "0110011",  --lw e sw (alu add)
+		'1' when "0000011",  --beq (alu subtract)
+		'1' when "0100011",  --R-format (add)
+		'0' when "1100011",  --R-format (sub)
+				
+		'X' when others;
+
+with I select MemtoReg &lt;=
+		'0' when "0110011",  --lw e sw (alu add)
+		'1' when "0000011",  --beq (alu subtract)
+		'X' when "0100011",  --R-format (add)
+		'X' when "1100011",  --R-format (sub)
+				
+		'X' when others;
+
+with I select RegWrite &lt;=
+		'1' when "0110011",  --lw e sw (alu add)
+		'1' when "0000011",  --beq (alu subtract)
+		'0' when "0100011",  --R-format (add)
+		'0' when "1100011",  --R-format (sub)
+				
+		'X' when others;
+
+with I select MemRead &lt;=
+		'0' when "0110011",  --lw e sw (alu add)
+		'1' when "0000011",  --beq (alu subtract)
+		'0' when "0100011",  --R-format (add)
+		'0' when "1100011",  --R-format (sub)
+				
+		'X' when others;
+
+with I select MemWrite &lt;=
+		'0' when "0110011",  --lw e sw (alu add)
+		'0' when "0000011",  --beq (alu subtract)
+		'1' when "0100011",  --R-format (add)
+		'0' when "1100011",  --R-format (sub)
+				
+		'X' when others;
+&#13;
+with I select Branch &lt;=
+		'0' when "0110011",  --lw e sw (alu add)
+		'0' when "0000011",  --beq (alu subtract)
+		'0' when "0100011",  --R-format (add)
+		'1' when "1100011",  --R-format (sub)
+				
+		'X' when others;
+
+with I select ALUOp1 &lt;=
+		'1' when "0110011",  --lw e sw (alu add)
+		'0' when "0000011",  --beq (alu subtract)
+		'0' when "0100011",  --R-format (add)
+		'0' when "1100011",  --R-format (sub)
+				
+		'X' when others;
+
+with I select ALUOp0 &lt;=
+		'0' when "0110011",  --lw e sw (alu add)
+		'0' when "0000011",  --beq (alu subtract)
+		'0' when "0100011",  --R-format (add)
+		'1' when "1100011",  --R-format (sub)
+				
+		'X' when others;
+
+
+END TypeArchitecture;&#13;
+</vhdl>
+  <vhdl name="alu_control">--------------------------------------------------------------------------------&#13;
+-- Project :&#13;
+-- File    :&#13;
+-- Autor   :&#13;
+-- Date    :&#13;
+--&#13;
+--------------------------------------------------------------------------------&#13;
+-- Description :&#13;
+--&#13;
+--------------------------------------------------------------------------------&#13;
+&#13;
+LIBRARY ieee;&#13;
+USE ieee.std_logic_1164.all;&#13;
+&#13;
+ENTITY alu_control IS&#13;
+  PORT (&#13;
+  ------------------------------------------------------------------------------&#13;
+  --Insert input ports below&#13;
+    I        : IN  std_logic_vector(31 DOWNTO 0); &#13;
+    ALUop_in : IN std_logic_vector(1 downto 0); -- input vector example&#13;
+  ------------------------------------------------------------------------------&#13;
+  --Insert output ports below&#13;
+    ALUCtrl_o        : OUT std_logic_vector(2 downto 0)                   -- output bit example&#13;
+    );&#13;
+END alu_control;&#13;
+&#13;
+--------------------------------------------------------------------------------&#13;
+--Complete your VHDL description below&#13;
+--------------------------------------------------------------------------------&#13;
+&#13;
+ARCHITECTURE TypeArchitecture OF alu_control IS&#13;
+&#13;
+BEGIN&#13;
+&#13;
+	with I(30)&amp;I(14 downto 12)&amp;ALUop_in select ALUCtrl_o &lt;=&#13;
+		"000" when "XXXX00",  --lw e sw (alu add)&#13;
+		"001" when "XXXXX1",  --beq (alu subtract)&#13;
+		"000" when "00001X",  --R-format (add)&#13;
+		"001" when "10001X",  --R-format (sub)&#13;
+		"111" when "01111X",  --R-format (and)&#13;
+		"110" when "01101X",  --R-format (or)&#13;
+		&#13;
+		&#13;
+		"XXX" when others;&#13;
+&#13;
+END TypeArchitecture;&#13;
+</vhdl>
+  <vhdl name="ImmGen">--------------------------------------------------------------------------------&#13;
+-- Project :&#13;
+-- File    :&#13;
+-- Autor   :&#13;
+-- Date    :&#13;
+--&#13;
+--------------------------------------------------------------------------------&#13;
+-- Description :&#13;
+--&#13;
+--------------------------------------------------------------------------------&#13;
+&#13;
+LIBRARY ieee;&#13;
+USE ieee.std_logic_1164.all;&#13;
+&#13;
+ENTITY ImmGen IS&#13;
+  PORT (&#13;
+  ------------------------------------------------------------------------------&#13;
+  --Insert input ports below&#13;
+    I        : IN  std_logic_vector(31 DOWNTO 0); -- input vector example&#13;
+  ------------------------------------------------------------------------------&#13;
+  --Insert output ports below&#13;
+    Imm        : OUT std_logic_vector(19 downto 0)                   -- output bit example&#13;
+    );&#13;
+END ImmGen;&#13;
+&#13;
+--------------------------------------------------------------------------------&#13;
+--Complete your VHDL description below&#13;
+--------------------------------------------------------------------------------&#13;
+&#13;
+ARCHITECTURE TypeArchitecture OF ImmGen IS&#13;
+&#13;
+BEGIN&#13;
+&#13;
+	with I(6 downto 0) select Imm &lt;=&#13;
+		"00000000"&amp;I(31 downto 20) when "0000011",  --I-type &#13;
+		"00000000"&amp;I(31 downto 20) when "0010011",  --I-type&#13;
+		"00000000"&amp;I(31 downto 20) when "1100111",  --I-type (jalr rd, rs, imm)&#13;
+		"00000000"&amp;I(31 downto 25)&amp;I(11 downto 7) when "0100011", --S-type (sw rs2, offset(rs1))&#13;
+		"00000000"&amp;I(31)&amp;I(7)&amp;I(30 downto 25)&amp;I(11 downto 8) when "1100011", --B-type&#13;
+		I(31 downto 12) when "0110111", --U-type (lui rd, offset)&#13;
+		I(31)&amp;I(19 downto 12)&amp;I(20)&amp;I(30 downto 21) when "1101111", --J-type (jal rd, imm)&#13;
+		"XXXXXXXXXXXXXXXXXXXX" when others;&#13;
+&#13;
+END TypeArchitecture;&#13;
+</vhdl>
+  <vhdl name="sum">--------------------------------------------------------------------------------&#13;
+-- Project :&#13;
+-- File    :&#13;
+-- Autor   :&#13;
+-- Date    :&#13;
+--&#13;
+--------------------------------------------------------------------------------&#13;
+-- Description :&#13;
+--&#13;
+--------------------------------------------------------------------------------&#13;
+&#13;
+LIBRARY ieee;&#13;
+USE ieee.std_logic_1164.all;&#13;
+&#13;
+ENTITY sum IS&#13;
+  PORT (&#13;
+  ------------------------------------------------------------------------------&#13;
+  &#13;
+    A_i      : IN  std_logic_vector(31 DOWNTO 0);        --operando 1               &#13;
+    B_i        : IN  std_logic_vector(31 DOWNTO 0);      --operando 2&#13;
+    carry_in     : IN std_logic;&#13;
+  ------------------------------------------------------------------------------&#13;
+  &#13;
+    carry_out        : OUT std_logic;                    -- output bit example&#13;
+    S_o        : OUT std_logic_vector(31 DOWNTO 0)  -- output vector example&#13;
+    );&#13;
+END sum;&#13;
+&#13;
+--------------------------------------------------------------------------------&#13;
+--Complete your VHDL description below&#13;
+--------------------------------------------------------------------------------&#13;
+&#13;
+ARCHITECTURE TypeArchitecture OF sum IS&#13;
+&#13;
+signal p : std_logic_vector(31 downto 0);&#13;
+signal g : std_logic_vector(31 downto 0);&#13;
+signal c : std_logic_vector(31 downto 0);&#13;
+signal S : std_logic_vector(31 downto 0);&#13;
+&#13;
+&#13;
+BEGIN&#13;
+&#13;
+p &lt;= A_i xor B_i;&#13;
+g &lt;= A_i and B_i;&#13;
+&#13;
+--estrutura do carry lookahead&#13;
+c(0) &lt;= carry_in;&#13;
+c(1) &lt;= g(0) or &#13;
+		 (p(0) and c(0));&#13;
+				 &#13;
+c(2) &lt;= g(1) or&#13;
+		 (p(1) and g(0)) or 	 &#13;
+		 (p(1) and p(0) and c(0));&#13;
+&#13;
+c(3) &lt;= g(2) or&#13;
+		 (p(2) and g(1)) or&#13;
+		 (p(2) and p(1) and g(0)) or&#13;
+		 (p(2) and p(1) and p(0) and c(0));&#13;
+		  &#13;
+c(4) &lt;= g(3) or &#13;
+		 (p(3) and g(2)) or&#13;
+		 (p(3) and p(2) and g(1)) or		 &#13;
+		 (p(3) and p(2) and p(1) and g(0)) or&#13;
+		 (p(3) and p(2) and p(1) and p(0) and c(0)); &#13;
+		 &#13;
+c(5) &lt;= g(4) or &#13;
+		 (p(4) and g(3)) or&#13;
+		 (p(4) and p(3) and g(2)) or&#13;
+		 (p(4) and p(3) and p(2) and g(1)) or&#13;
+		 (p(4) and p(3) and p(2) and p(1) and g(0)) or &#13;
+		 (p(4) and p(3) and p(2) and p(1) and p(0) and c(0));		 				 &#13;
+&#13;
+	&#13;
+c(6) &lt;= g(5) or&#13;
+		 (p(5) and g(4)) or &#13;
+		 (p(5) and p(4) and g(3)) or&#13;
+		 (p(5) and p(4) and p(3) and g(2)) or&#13;
+		 (p(5) and p(4) and p(3) and p(2) and g(1)) or&#13;
+		 (p(5) and p(4) and p(3) and p(2) and p(1) and g(0)) or &#13;
+		 (p(5) and p(4) and p(3) and p(2) and p(1) and p(0) and c(0)); 		&#13;
+&#13;
+c(7) &lt;= g(6) or&#13;
+		 (p(6) and g(5)) or&#13;
+		 (p(6) and p(5) and g(4)) or&#13;
+		 (p(6) and p(5) and p(4) and g(3)) or&#13;
+		 (p(6) and p(5) and p(4) and p(3) and g(2)) or&#13;
+		 (p(6) and p(5) and p(4) and p(3) and p(2) and g(1)) or&#13;
+		 (p(6) and p(5) and p(4) and p(3) and p(2) and p(1) and g(0)) or&#13;
+		 (p(6) and p(5) and p(4) and p(3) and p(2) and p(1) and p(0) and c(0)); &#13;
+&#13;
+c(8) &lt;= g(7) or&#13;
+		 (p(7) and g(6)) or&#13;
+		 (p(7) and p(6) and g(5)) or&#13;
+		 (p(7) and p(6) and p(5) and g(4)) or&#13;
+		 (p(7) and p(6) and p(5) and p(4) and g(3)) or&#13;
+		 (p(7) and p(6) and p(5) and p(4) and p(3) and g(2)) or	&#13;
+		 (p(7) and p(6) and p(5) and p(4) and p(3) and p(2) and g(1)) or&#13;
+		 (p(7) and p(6) and p(5) and p(4) and p(3) and p(2) and p(1) and g(0)) or &#13;
+		 (p(7) and p(6) and p(5) and p(4) and p(3) and p(2) and p(1) and p(0) and c(0));&#13;
+&#13;
+c(9) &lt;= g(8) or&#13;
+		 (p(8) and g(7)) or&#13;
+		 (p(8) and p(7) and g(6)) or&#13;
+		 (p(8) and p(7) and p(6) and g(5)) or&#13;
+		 (p(8) and p(7) and p(6) and p(5) and g(4)) or&#13;
+		 (p(8) and p(7) and p(6) and p(5) and p(4) and g(3)) or	&#13;
+		 (p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and g(2)) or&#13;
+		 (p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and p(2) and g(1)) or &#13;
+		 (p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and p(2) and p(1) and g(0)) or &#13;
+		 (p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and p(2) and p(1) and p(0) and c(0));&#13;
+&#13;
+c(10) &lt;= g(9) or&#13;
+		 (p(9) and g(8)) or&#13;
+		 (p(9) and p(8) and g(7)) or&#13;
+		 (p(9) and p(8) and p(7) and g(6)) or&#13;
+		 (p(9) and p(8) and p(7) and p(6) and g(5)) or&#13;
+		 (p(9) and p(8) and p(7) and p(6) and p(5) and g(4)) or&#13;
+		 (p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and g(3)) or&#13;
+		 (p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and g(2)) or&#13;
+		 (p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and p(2) and g(1)) or&#13;
+		 (p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and p(2) and p(1) and g(0)) or&#13;
+		 (p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and p(2) and p(1) and p(0) and c(0));&#13;
+&#13;
+&#13;
+c(11) &lt;= g(10) or&#13;
+		 (p(10) and g(9)) or&#13;
+		 (p(10) and p(9) and g(8)) or&#13;
+		 (p(10) and p(9) and p(8) and g(7)) or&#13;
+		 (p(10) and p(9) and p(8) and p(7) and g(6)) or&#13;
+		 (p(10) and p(9) and p(8) and p(7) and p(6) and g(5)) or&#13;
+		 (p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and g(4)) or&#13;
+		 (p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and g(3)) or&#13;
+		 (p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and g(2)) or&#13;
+		 (p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and p(2) and g(1)) or&#13;
+		 (p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and p(2) and p(1) and g(0)) or&#13;
+		 (p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and p(2) and p(1) and p(0) and c(0));&#13;
+		 &#13;
+c(12) &lt;= g(11) or&#13;
+		 (p(11) and g(10)) or&#13;
+		 (p(11) and p(10) and g(9)) or&#13;
+		 (p(11) and p(10) and p(9) and g(8)) or&#13;
+		 (p(11) and p(10) and p(9) and p(8) and g(7)) or&#13;
+		 (p(11) and p(10) and p(9) and p(8) and p(7) and g(6)) or&#13;
+		 (p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and g(5)) or&#13;
+		 (p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and g(4)) or&#13;
+		 (p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and g(3)) or&#13;
+		 (p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and g(2)) or&#13;
+		 (p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and p(2) and g(1)) or&#13;
+		 (p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and p(2) and p(1) and g(0)) or&#13;
+		 (p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and p(2) and p(1) and p(0) and c(0));&#13;
+&#13;
+c(13) &lt;= g(12) or&#13;
+		 (p(12) and g(11)) or&#13;
+		 (p(12) and p(11) and g(10)) or&#13;
+		 (p(12) and p(11) and p(10) and g(9)) or&#13;
+		 (p(12) and p(11) and p(10) and p(9) and g(8)) or&#13;
+		 (p(12) and p(11) and p(10) and p(9) and p(8) and g(7)) or&#13;
+		 (p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and g(6)) or&#13;
+		 (p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and g(5)) or&#13;
+		 (p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and g(4)) or&#13;
+		 (p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and g(3)) or&#13;
+		 (p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and g(2)) or&#13;
+		 (p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and p(2) and g(1)) or&#13;
+		 (p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and p(2) and p(1) and g(0)) or&#13;
+		 (p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and p(2) and p(1) and p(0) and c(0));	&#13;
+&#13;
+c(14) &lt;= g(13) or&#13;
+		 (p(13) and g(12)) or&#13;
+		 (p(13) and p(12) and g(11)) or&#13;
+		 (p(13) and p(12) and p(11) and g(10)) or&#13;
+		 (p(13) and p(12) and p(11) and p(10) and g(9)) or&#13;
+		 (p(13) and p(12) and p(11) and p(10) and p(9) and g(8)) or&#13;
+		 (p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and g(7)) or&#13;
+		 (p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and g(6)) or&#13;
+		 (p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and g(5)) or&#13;
+		 (p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and g(4)) or&#13;
+		 (p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and g(3)) or&#13;
+		 (p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and g(2)) or&#13;
+		 (p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and p(2) and g(1)) or&#13;
+		 (p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and p(2) and p(1) and g(0)) or&#13;
+		 (p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and p(2) and p(1) and p(0) and c(0));&#13;
+&#13;
+c(15) &lt;= g(14) or&#13;
+		 (p(14) and g(13)) or&#13;
+		 (p(14) and p(13) and g(12)) or&#13;
+		 (p(14) and p(13) and p(12) and g(11)) or&#13;
+		 (p(14) and p(13) and p(12) and p(11) and g(10)) or&#13;
+		 (p(14) and p(13) and p(12) and p(11) and p(10) and g(9)) or&#13;
+		 (p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and g(8)) or&#13;
+		 (p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and g(7)) or&#13;
+		 (p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and g(6)) or&#13;
+		 (p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and g(5)) or&#13;
+		 (p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and g(4)) or&#13;
+		 (p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and g(3)) or&#13;
+		 (p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and g(2)) or&#13;
+		 (p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and p(2) and g(1)) or&#13;
+		 (p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and p(2) and p(1) and g(0)) or&#13;
+		 (p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and p(2) and p(1) and p(0) and c(0));&#13;
+&#13;
+c(16) &lt;= g(15) or&#13;
+		 (p(15) and g(14)) or&#13;
+		 (p(15) and p(14) and g(13)) or&#13;
+		 (p(15) and p(14) and p(13) and g(12)) or&#13;
+		 (p(15) and p(14) and p(13) and p(12) and g(11)) or&#13;
+		 (p(15) and p(14) and p(13) and p(12) and p(11) and g(10)) or&#13;
+		 (p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and g(9)) or&#13;
+		 (p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and g(8)) or&#13;
+		 (p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and g(7)) or&#13;
+		 (p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and g(6)) or&#13;
+		 (p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and g(5)) or&#13;
+		 (p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and g(4)) or&#13;
+		 (p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and g(3)) or&#13;
+		 (p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and g(2)) or&#13;
+		 (p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and p(2) and g(1)) or&#13;
+		 (p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and p(2) and p(1) and g(0)) or&#13;
+		 (p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and p(2) and p(1) and p(0) and c(0));&#13;
+&#13;
+c(17) &lt;= g(16) or&#13;
+		 (p(16) and g(15)) or&#13;
+		 (p(16) and p(15) and g(14)) or&#13;
+		 (p(16) and p(15) and p(14) and g(13)) or&#13;
+		 (p(16) and p(15) and p(14) and p(13) and g(12)) or&#13;
+		 (p(16) and p(15) and p(14) and p(13) and p(12) and g(11)) or&#13;
+		 (p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and g(10)) or&#13;
+		 (p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and g(9)) or&#13;
+		 (p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and g(8)) or&#13;
+		 (p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and g(7)) or&#13;
+		 (p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and g(6)) or&#13;
+		 (p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and g(5)) or&#13;
+		 (p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and g(4)) or&#13;
+		 (p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and g(3)) or&#13;
+		 (p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and g(2)) or&#13;
+		 (p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and p(2) and g(1)) or&#13;
+		 (p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and p(2) and p(1) and g(0)) or&#13;
+		 (p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and p(2) and p(1) and p(0) and c(0));&#13;
+&#13;
+c(18) &lt;= g(17) or&#13;
+		 (p(17) and g(16)) or&#13;
+		 (p(17) and p(16) and g(15)) or&#13;
+		 (p(17) and p(16) and p(15) and g(14)) or&#13;
+		 (p(17) and p(16) and p(15) and p(14) and g(13)) or&#13;
+		 (p(17) and p(16) and p(15) and p(14) and p(13) and g(12)) or&#13;
+		 (p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and g(11)) or&#13;
+		 (p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and g(10)) or&#13;
+		 (p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and g(9)) or&#13;
+		 (p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and g(8)) or&#13;
+		 (p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and g(7)) or&#13;
+		 (p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and g(6)) or&#13;
+		 (p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and g(5)) or&#13;
+		 (p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and g(4)) or&#13;
+		 (p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and g(3)) or&#13;
+		 (p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and g(2)) or&#13;
+		 (p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and p(2) and g(1)) or&#13;
+		 (p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and p(2) and p(1) and g(0)) or&#13;
+		 (p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and p(2) and p(1) and p(0) and c(0));	&#13;
+&#13;
+c(19) &lt;= g(18) or&#13;
+		 (p(18) and g(17)) or&#13;
+		 (p(18) and p(17) and g(16)) or&#13;
+		 (p(18) and p(17) and p(16) and g(15)) or&#13;
+		 (p(18) and p(17) and p(16) and p(15) and g(14)) or&#13;
+		 (p(18) and p(17) and p(16) and p(15) and p(14) and g(13)) or&#13;
+		 (p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and g(12)) or&#13;
+		 (p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and g(11)) or&#13;
+		 (p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and g(10)) or&#13;
+		 (p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and g(9)) or&#13;
+		 (p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and g(8)) or&#13;
+		 (p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and g(7)) or&#13;
+		 (p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and g(6)) or&#13;
+		 (p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and g(5)) or&#13;
+		 (p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and g(4)) or&#13;
+		 (p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and g(3)) or&#13;
+		 (p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and g(2)) or&#13;
+		 (p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and p(2) and g(1)) or&#13;
+		 (p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and p(2) and p(1) and g(0)) or&#13;
+		 (p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and p(2) and p(1) and p(0) and c(0));&#13;
+&#13;
+c(20) &lt;= g(19) or&#13;
+		 (p(19) and g(18)) or&#13;
+		 (p(19) and p(18) and g(17)) or&#13;
+		 (p(19) and p(18) and p(17) and g(16)) or&#13;
+		 (p(19) and p(18) and p(17) and p(16) and g(15)) or&#13;
+		 (p(19) and p(18) and p(17) and p(16) and p(15) and g(14)) or&#13;
+		 (p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and g(13)) or&#13;
+		 (p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and g(12)) or&#13;
+		 (p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and g(11)) or&#13;
+		 (p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and g(10)) or&#13;
+		 (p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and g(9)) or&#13;
+		 (p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and g(8)) or&#13;
+		 (p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and g(7)) or&#13;
+		 (p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and g(6)) or&#13;
+		 (p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and g(5)) or&#13;
+		 (p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and g(4)) or&#13;
+		 (p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and g(3)) or&#13;
+		 (p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and g(2)) or&#13;
+		 (p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and p(2) and g(1)) or&#13;
+		 (p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and p(2) and p(1) and g(0)) or&#13;
+		 (p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and p(2) and p(1) and p(0) and c(0));&#13;
+&#13;
+c(21) &lt;= g(20) or&#13;
+		 (p(20) and g(19)) or&#13;
+		 (p(20) and p(19) and g(18)) or&#13;
+		 (p(20) and p(19) and p(18) and g(17)) or&#13;
+		 (p(20) and p(19) and p(18) and p(17) and g(16)) or&#13;
+		 (p(20) and p(19) and p(18) and p(17) and p(16) and g(15)) or&#13;
+		 (p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and g(14)) or&#13;
+		 (p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and g(13)) or&#13;
+		 (p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and g(12)) or&#13;
+		 (p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and g(11)) or&#13;
+		 (p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and g(10)) or&#13;
+		 (p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and g(9)) or&#13;
+		 (p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and g(8)) or&#13;
+		 (p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and g(7)) or&#13;
+		 (p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and g(6)) or&#13;
+		 (p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and g(5)) or&#13;
+		 (p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and g(4)) or&#13;
+		 (p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and g(3)) or&#13;
+		 (p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and g(2)) or&#13;
+		 (p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and p(2) and g(1)) or&#13;
+		 (p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and p(2) and p(1) and g(0)) or&#13;
+		 (p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and p(2) and p(1) and p(0) and c(0));&#13;
+&#13;
+c(22) &lt;= g(21) or&#13;
+		 (p(21) and g(20)) or&#13;
+		 (p(21) and p(20) and g(19)) or&#13;
+		 (p(21) and p(20) and p(19) and g(18)) or&#13;
+		 (p(21) and p(20) and p(19) and p(18) and g(17)) or&#13;
+		 (p(21) and p(20) and p(19) and p(18) and p(17) and g(16)) or&#13;
+		 (p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and g(15)) or&#13;
+		 (p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and g(14)) or&#13;
+		 (p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and g(13)) or&#13;
+		 (p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and g(12)) or&#13;
+		 (p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and g(11)) or&#13;
+		 (p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and g(10)) or&#13;
+		 (p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and g(9)) or&#13;
+		 (p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and g(8)) or&#13;
+		 (p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and g(7)) or&#13;
+		 (p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and g(6)) or&#13;
+		 (p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and g(5)) or&#13;
+		 (p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and g(4)) or&#13;
+		 (p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and g(3)) or&#13;
+		 (p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and g(2)) or&#13;
+		 (p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and p(2) and g(1)) or&#13;
+		 (p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and p(2) and p(1) and g(0)) or&#13;
+		 (p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and p(2) and p(1) and p(0) and c(0));&#13;
+&#13;
+c(23) &lt;= g(22) or&#13;
+		 (p(22) and g(21)) or&#13;
+		 (p(22) and p(21) and g(20)) or&#13;
+		 (p(22) and p(21) and p(20) and g(19)) or&#13;
+		 (p(22) and p(21) and p(20) and p(19) and g(18)) or&#13;
+		 (p(22) and p(21) and p(20) and p(19) and p(18) and g(17)) or&#13;
+		 (p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and g(16)) or&#13;
+		 (p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and g(15)) or&#13;
+		 (p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and g(14)) or&#13;
+		 (p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and g(13)) or&#13;
+		 (p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and g(12)) or&#13;
+		 (p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and g(11)) or&#13;
+		 (p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and g(10)) or&#13;
+		 (p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and g(9)) or&#13;
+		 (p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and g(8)) or&#13;
+		 (p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and g(7)) or&#13;
+		 (p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and g(6)) or&#13;
+		 (p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and g(5)) or&#13;
+		 (p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and g(4)) or&#13;
+		 (p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and g(3)) or&#13;
+		 (p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and g(2)) or&#13;
+		 (p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and p(2) and g(1)) or&#13;
+		 (p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and p(2) and p(1) and g(0)) or&#13;
+		 (p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and p(2) and p(1) and p(0) and c(0));&#13;
+&#13;
+c(24) &lt;= g(23) or&#13;
+		 (p(23) and g(22)) or&#13;
+		 (p(23) and p(22) and p(21)) or&#13;
+		 (p(23) and p(22) and p(21) and g(20)) or&#13;
+		 (p(23) and p(22) and p(21) and p(20) and g(19)) or&#13;
+		 (p(23) and p(22) and p(21) and p(20) and p(19) and g(18)) or&#13;
+		 (p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and g(17)) or&#13;
+		 (p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and g(16)) or&#13;
+		 (p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and g(15)) or&#13;
+		 (p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and g(14)) or&#13;
+		 (p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and g(13)) or&#13;
+		 (p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and g(12)) or&#13;
+		 (p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and g(11)) or&#13;
+		 (p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and g(10)) or&#13;
+		 (p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and g(9)) or&#13;
+		 (p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and g(8)) or&#13;
+		 (p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and g(7)) or&#13;
+		 (p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and g(6)) or&#13;
+		 (p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and g(5)) or&#13;
+		 (p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and g(4)) or&#13;
+		 (p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and g(3)) or&#13;
+		 (p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and g(2)) or&#13;
+		 (p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and p(2) and g(1)) or&#13;
+		 (p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and p(2) and p(1) and g(0)) or&#13;
+		 (p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and p(2) and p(1) and p(0) and c(0));		 		 &#13;
+&#13;
+c(25) &lt;= g(24) or&#13;
+		 (p(24) and g(23)) or&#13;
+		 (p(24) and p(23) and g(22)) or&#13;
+		 (p(24) and p(23) and p(22) and p(21)) or&#13;
+		 (p(24) and p(23) and p(22) and p(21) and g(20)) or&#13;
+		 (p(24) and p(23) and p(22) and p(21) and p(20) and g(19)) or&#13;
+		 (p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and g(18)) or&#13;
+		 (p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and g(17)) or&#13;
+		 (p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and g(16)) or&#13;
+		 (p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and g(15)) or&#13;
+		 (p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and g(14)) or&#13;
+		 (p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and g(13)) or&#13;
+		 (p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and g(12)) or&#13;
+		 (p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and g(11)) or&#13;
+		 (p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and g(10)) or&#13;
+		 (p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and g(9)) or&#13;
+		 (p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and g(8)) or&#13;
+		 (p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and g(7)) or&#13;
+		 (p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and g(6)) or&#13;
+		 (p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and g(5)) or&#13;
+		 (p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and g(4)) or&#13;
+		 (p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and g(3)) or&#13;
+		 (p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and g(2)) or&#13;
+		 (p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and p(2) and g(1)) or&#13;
+		 (p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and p(2) and p(1) and g(0)) or&#13;
+		 (p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and p(2) and p(1) and p(0) and c(0));		 		 		 &#13;
+&#13;
+c(26) &lt;= g(25) or&#13;
+		 (p(25) and g(24)) or&#13;
+		 (p(25) and p(24) and g(23)) or&#13;
+		 (p(25) and p(24) and p(23) and g(22)) or&#13;
+		 (p(25) and p(24) and p(23) and p(22) and p(21)) or&#13;
+		 (p(25) and p(24) and p(23) and p(22) and p(21) and g(20)) or&#13;
+		 (p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and g(19)) or&#13;
+		 (p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and g(18)) or&#13;
+		 (p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and g(17)) or&#13;
+		 (p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and g(16)) or&#13;
+		 (p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and g(15)) or&#13;
+		 (p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and g(14)) or&#13;
+		 (p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and g(13)) or&#13;
+		 (p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and g(12)) or&#13;
+		 (p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and g(11)) or&#13;
+		 (p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and g(10)) or&#13;
+		 (p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and g(9)) or&#13;
+		 (p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and g(8)) or&#13;
+		 (p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and g(7)) or&#13;
+		 (p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and g(6)) or&#13;
+		 (p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and g(5)) or&#13;
+		 (p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and g(4)) or&#13;
+		 (p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and g(3)) or&#13;
+		 (p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and g(2)) or&#13;
+		 (p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and p(2) and g(1)) or&#13;
+		 (p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and p(2) and p(1) and g(0)) or&#13;
+		 (p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and p(2) and p(1) and p(0) and c(0));		 		 		 &#13;
+&#13;
+c(27) &lt;= g(26) or&#13;
+		 (p(26) and g(25)) or&#13;
+		 (p(26) and p(25) and g(24)) or&#13;
+		 (p(26) and p(25) and p(24) and g(23)) or&#13;
+		 (p(26) and p(25) and p(24) and p(23) and g(22)) or&#13;
+		 (p(26) and p(25) and p(24) and p(23) and p(22) and p(21)) or&#13;
+		 (p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and g(20)) or&#13;
+		 (p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and g(19)) or&#13;
+		 (p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and g(18)) or&#13;
+		 (p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and g(17)) or&#13;
+		 (p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and g(16)) or&#13;
+		 (p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and g(15)) or&#13;
+		 (p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and g(14)) or&#13;
+		 (p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and g(13)) or&#13;
+		 (p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and g(12)) or&#13;
+		 (p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and g(11)) or&#13;
+		 (p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and g(10)) or&#13;
+		 (p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and g(9)) or&#13;
+		 (p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and g(8)) or&#13;
+		 (p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and g(7)) or&#13;
+		 (p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and g(6)) or&#13;
+		 (p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and g(5)) or&#13;
+		 (p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and g(4)) or&#13;
+		 (p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and g(3)) or&#13;
+		 (p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and g(2)) or&#13;
+		 (p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and p(2) and g(1)) or&#13;
+		 (p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and p(2) and p(1) and g(0)) or&#13;
+		 (p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and p(2) and p(1) and p(0) and c(0));		&#13;
+&#13;
+c(28) &lt;= g(27) or&#13;
+		 (p(27) and g(26)) or&#13;
+		 (p(27) and p(26) and g(25)) or&#13;
+		 (p(27) and p(26) and p(25) and g(24)) or&#13;
+		 (p(27) and p(26) and p(25) and p(24) and g(23)) or&#13;
+		 (p(27) and p(26) and p(25) and p(24) and p(23) and g(22)) or&#13;
+		 (p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21)) or&#13;
+		 (p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and g(20)) or&#13;
+		 (p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and g(19)) or&#13;
+		 (p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and g(18)) or&#13;
+		 (p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and g(17)) or&#13;
+		 (p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and g(16)) or&#13;
+		 (p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and g(15)) or&#13;
+		 (p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and g(14)) or&#13;
+		 (p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and g(13)) or&#13;
+		 (p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and g(12)) or&#13;
+		 (p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and g(11)) or&#13;
+		 (p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and g(10)) or&#13;
+		 (p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and g(9)) or&#13;
+		 (p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and g(8)) or&#13;
+		 (p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and g(7)) or&#13;
+		 (p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and g(6)) or&#13;
+		 (p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and g(5)) or&#13;
+		 (p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and g(4)) or&#13;
+		 (p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and g(3)) or&#13;
+		 (p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and g(2)) or&#13;
+		 (p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and p(2) and g(1)) or&#13;
+		 (p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and p(2) and p(1) and g(0)) or&#13;
+		 (p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and p(2) and p(1) and p(0) and c(0));&#13;
+&#13;
+c(29) &lt;= g(28) or&#13;
+		 (p(28) and g(27)) or&#13;
+		 (p(28) and p(27) and g(26)) or&#13;
+		 (p(28) and p(27) and p(26) and g(25)) or&#13;
+		 (p(28) and p(27) and p(26) and p(25) and g(24)) or&#13;
+		 (p(28) and p(27) and p(26) and p(25) and p(24) and g(23)) or&#13;
+		 (p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and g(22)) or&#13;
+		 (p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21)) or&#13;
+		 (p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and g(20)) or&#13;
+		 (p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and g(19)) or&#13;
+		 (p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and g(18)) or&#13;
+		 (p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and g(17)) or&#13;
+		 (p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and g(16)) or&#13;
+		 (p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and g(15)) or&#13;
+		 (p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and g(14)) or&#13;
+		 (p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and g(13)) or&#13;
+		 (p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and g(12)) or&#13;
+		 (p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and g(11)) or&#13;
+		 (p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and g(10)) or&#13;
+		 (p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and g(9)) or&#13;
+		 (p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and g(8)) or&#13;
+		 (p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and g(7)) or&#13;
+		 (p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and g(6)) or&#13;
+		 (p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and g(5)) or&#13;
+		 (p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and g(4)) or&#13;
+		 (p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and g(3)) or&#13;
+		 (p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and g(2)) or&#13;
+		 (p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and p(2) and g(1)) or&#13;
+		 (p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and p(2) and p(1) and g(0)) or&#13;
+		 (p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and p(2) and p(1) and p(0) and c(0));		 				 &#13;
+&#13;
+c(30) &lt;= g(29) or&#13;
+		 (p(29) and g(28)) or&#13;
+		 (p(29) and p(28) and g(27)) or&#13;
+		 (p(29) and p(28) and p(27) and g(26)) or&#13;
+		 (p(29) and p(28) and p(27) and p(26) and g(25)) or&#13;
+		 (p(29) and p(28) and p(27) and p(26) and p(25) and g(24)) or&#13;
+		 (p(29) and p(28) and p(27) and p(26) and p(25) and p(24) and g(23)) or&#13;
+		 (p(29) and p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and g(22)) or&#13;
+		 (p(29) and p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21)) or&#13;
+		 (p(29) and p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and g(20)) or&#13;
+		 (p(29) and p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and g(19)) or&#13;
+		 (p(29) and p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and g(18)) or&#13;
+		 (p(29) and p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and g(17)) or&#13;
+		 (p(29) and p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and g(16)) or&#13;
+		 (p(29) and p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and g(15)) or&#13;
+		 (p(29) and p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and g(14)) or&#13;
+		 (p(29) and p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and g(13)) or&#13;
+		 (p(29) and p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and g(12)) or&#13;
+		 (p(29) and p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and g(11)) or&#13;
+		 (p(29) and p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and g(10)) or&#13;
+		 (p(29) and p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and g(9)) or&#13;
+		 (p(29) and p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and g(8)) or&#13;
+		 (p(29) and p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and g(7)) or&#13;
+		 (p(29) and p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and g(6)) or&#13;
+		 (p(29) and p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and g(5)) or&#13;
+		 (p(29) and p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and g(4)) or&#13;
+		 (p(29) and p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and g(3)) or&#13;
+		 (p(29) and p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and g(2)) or&#13;
+		 (p(29) and p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and p(2) and g(1)) or&#13;
+		 (p(29) and p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and p(2) and p(1) and g(0)) or&#13;
+		 (p(29) and p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and p(2) and p(1) and p(0) and c(0));		 				 		 &#13;
+		  		 		 		 &#13;
+&#13;
+c(31) &lt;= g(30) or&#13;
+		 (p(30) and g(29)) or&#13;
+		 (p(30) and p(29) and g(28)) or&#13;
+		 (p(30) and p(29) and p(28) and g(27)) or&#13;
+		 (p(30) and p(29) and p(28) and p(27) and g(26)) or&#13;
+		 (p(30) and p(29) and p(28) and p(27) and p(26) and g(25)) or&#13;
+		 (p(30) and p(29) and p(28) and p(27) and p(26) and p(25) and g(24)) or&#13;
+		 (p(30) and p(29) and p(28) and p(27) and p(26) and p(25) and p(24) and g(23)) or&#13;
+		 (p(30) and p(29) and p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and g(22)) or&#13;
+		 (p(30) and p(29) and p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21)) or&#13;
+		 (p(30) and p(29) and p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and g(20)) or&#13;
+		 (p(30) and p(29) and p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and g(19)) or&#13;
+		 (p(30) and p(29) and p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and g(18)) or&#13;
+		 (p(30) and p(29) and p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and g(17)) or&#13;
+		 (p(30) and p(29) and p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and g(16)) or&#13;
+		 (p(30) and p(29) and p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and g(15)) or&#13;
+		 (p(30) and p(29) and p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and g(14)) or&#13;
+		 (p(30) and p(29) and p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and g(13)) or&#13;
+		 (p(30) and p(29) and p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and g(12)) or&#13;
+		 (p(30) and p(29) and p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and g(11)) or&#13;
+		 (p(30) and p(29) and p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and g(10)) or&#13;
+		 (p(30) and p(29) and p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and g(9)) or&#13;
+		 (p(30) and p(29) and p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and g(8)) or&#13;
+		 (p(30) and p(29) and p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and g(7)) or&#13;
+		 (p(30) and p(29) and p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and g(6)) or&#13;
+		 (p(30) and p(29) and p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and g(5)) or&#13;
+		 (p(30) and p(29) and p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and g(4)) or&#13;
+		 (p(30) and p(29) and p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and g(3)) or&#13;
+		 (p(30) and p(29) and p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and g(2)) or&#13;
+		 (p(30) and p(29) and p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and p(2) and g(1)) or&#13;
+		 (p(30) and p(29) and p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and p(2) and p(1) and g(0)) or&#13;
+		 (p(30) and p(29) and p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and p(2) and p(1) and p(0) and c(0));		 				 		 &#13;
+&#13;
+	S_o &lt;= p xor c;&#13;
+&#13;
+     carry_out &lt;= (g(31) or (p(31) and g(30)) or&#13;
+					 (p(31) and p(30) and g(29)) or&#13;
+					 (p(31) and p(30) and p(29) and g(28)) or&#13;
+					 (p(31) and p(30) and p(29) and p(28) and g(27)) or&#13;
+					 (p(31) and p(30) and p(29) and p(28) and p(27) and g(26)) or&#13;
+					 (p(31) and p(30) and p(29) and p(28) and p(27) and p(26) and g(25)) or&#13;
+					 (p(31) and p(30) and p(29) and p(28) and p(27) and p(26) and p(25) and g(24)) or&#13;
+					 (p(31) and p(30) and p(29) and p(28) and p(27) and p(26) and p(25) and p(24) and g(23)) or&#13;
+					 (p(31) and p(30) and p(29) and p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and g(22)) or&#13;
+					 (p(31) and p(30) and p(29) and p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21)) or&#13;
+					 (p(31) and p(30) and p(29) and p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and g(20)) or&#13;
+					 (p(31) and p(30) and p(29) and p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and g(19)) or&#13;
+					 (p(31) and p(30) and p(29) and p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and g(18)) or&#13;
+					 (p(31) and p(30) and p(29) and p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and g(17)) or&#13;
+					 (p(31) and p(30) and p(29) and p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and g(16)) or&#13;
+					 (p(31) and p(30) and p(29) and p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and g(15)) or&#13;
+					 (p(31) and p(30) and p(29) and p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and g(14)) or&#13;
+					 (p(31) and p(30) and p(29) and p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and g(13)) or&#13;
+					 (p(31) and p(30) and p(29) and p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and g(12)) or&#13;
+					 (p(31) and p(30) and p(29) and p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and g(11)) or&#13;
+					 (p(31) and p(30) and p(29) and p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and g(10)) or&#13;
+					 (p(31) and p(30) and p(29) and p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and g(9)) or&#13;
+					 (p(31) and p(30) and p(29) and p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and g(8)) or&#13;
+					 (p(31) and p(30) and p(29) and p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and g(7)) or&#13;
+					 (p(31) and p(30) and p(29) and p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and g(6)) or&#13;
+					 (p(31) and p(30) and p(29) and p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and g(5)) or&#13;
+					 (p(31) and p(30) and p(29) and p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and g(4)) or&#13;
+					 (p(31) and p(30) and p(29) and p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and g(3)) or&#13;
+					 (p(31) and p(30) and p(29) and p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and g(2)) or&#13;
+					 (p(31) and p(30) and p(29) and p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and p(2) and g(1)) or&#13;
+					 (p(31) and p(30) and p(29) and p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and p(2) and p(1) and g(0)) or&#13;
+					 (p(31) and p(30) and p(29) and p(28) and p(27) and p(26) and p(25) and p(24) and p(23) and p(22) and p(21) and p(20) and p(19) and p(18) and p(17) and p(16) and p(15) and p(14) and p(13) and p(12) and p(11) and p(10) and p(9) and p(8) and p(7) and p(6) and p(5) and p(4) and p(3) and p(2) and p(1) and p(0) and c(0))) when "11",&#13;
+		'0' when others;&#13;
+&#13;
+END TypeArchitecture;&#13;
+</vhdl>
+  <vhdl name="ALU">--------------------------------------------------------------------------------
+-- Project :
+-- File    :
+-- Autor   :
+-- Date    :
+--
+--------------------------------------------------------------------------------
+-- Description :
+--
+--------------------------------------------------------------------------------
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+USE ieee.numeric_std.all;
+
+ENTITY ALU IS
+  PORT (
+  ------------------------------------------------------------------------------
+  --input ports
+    input0,input1        : IN  std_logic_vector(31 DOWNTO 0);
+    branch			: IN  std_logic;
+    branch_operation	: IN  std_logic;
+    operation		 	: IN std_logic_vector(2 downto 0);
+  ------------------------------------------------------------------------------
+  --output ports
+    branch_output		: OUT  std_logic;
+    saida        		: OUT std_logic_vector(31 DOWNTO 0)
+    );
+END ALU;
+
+--------------------------------------------------------------------------------
+--Complete your VHDL description below
+--------------------------------------------------------------------------------
+
+ARCHITECTURE TypeArchitecture OF ALU IS
+
+
+	signal result_temp : std_logic_vector(32 downto 0) := "000000000000000000000000000000000";
+
+BEGIN
+
+	process(input0, input1, operation, branch, branch_operation)
+	begin
+		if (branch = '1') then
+			saida &lt;= "00000000000000000000000000000000";
+			case branch_operation is
+				when "0" =&gt; --BEQ (branch if equal)
+					result_temp &lt;= std_logic_vector(signed(input0(31) &amp; input0) - signed(input1(31) &amp; input1));
+					if (result_temp = "000000000000000000000000000000000") then
+						branch_output &lt;= '1';
+					else
+						branch_output &lt;= '0';
+					end if;
+
+				when "1" =&gt; --BNE (branch not equal)
+					result_temp &lt;= std_logic_vector(signed(input0(31) &amp; input0) - signed(input1(31) &amp; input1));
+					if (result_temp = "000000000000000000000000000000000") then
+						branch_output &lt;= '0';
+					else
+						branch_output &lt;= '1';
+					end if;
+				when others =&gt;
+					branch_output &lt;= '0';
+			end case;
+		else
+			branch_output &lt;= '0';
+			case operation is
+				when "000" =&gt;
+					saida &lt;= std_logic_vector(signed(input0) + signed(input1));
+	
+				when "001" =&gt;
+					saida &lt;= std_logic_vector(signed(input0) - signed(input1));
+	
+				when "100" =&gt;
+					saida &lt;= input0 xor input1;
+	
+				when "110" =&gt; 
+					saida &lt;= input0 or input1;
+	
+				when "111" =&gt; 
+					saida &lt;= input0 and input1;
+	
+				when others =&gt; --apenas zera tudo
+					saida &lt;= "00000000000000000000000000000000";
+
+			end case;
+		end if;
+	end process;
+
+END TypeArchitecture;
+</vhdl>
+  <vhdl name="datamem">library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+
+entity datamem is
+	port (
+		clock : in std_logic;
+		write_enable : in std_logic;
+		address : in std_logic_vector(15 downto 0);
+		input_data : in std_logic_vector(7 downto 0);
+		output_data : out std_logic_vector(7 downto 0)
+	);
+end datamem;
+architecture behavioural of datamem is
+	type ram_type is array (65536 downto 0) of std_logic_vector (7 downto 0);
+	signal RAM : ram_type;
+begin
+	process (clock, write_enable)
+	begin
+		if falling_edge(clock) and write_enable = '1' then
+			RAM(conv_integer(address)) &lt;= input_data;
+		end if;
+	end process;
+	output_data &lt;= RAM(conv_integer(address));
+end behavioural;
+</vhdl>
+  <vhdl name="datamem_interface">library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use work.all;
+
+entity datamem_interface is
+	port (
+		input_data : in std_logic_vector(31 downto 0);
+		byte_address : in std_logic_vector(31 downto 0);
+		clock, read, write: in std_logic;
+		output_data : out std_logic_vector(31 downto 0);
+		internal_mem_out0: out std_logic_vector(7 downto 0);
+		internal_mem_out1: out std_logic_vector(7 downto 0);
+		internal_mem_out2: out std_logic_vector(7 downto 0);
+		internal_mem_out3: out std_logic_vector(7 downto 0);
+		internal_mem_in0: in std_logic_vector(7 downto 0);
+		internal_mem_in1: in std_logic_vector(7 downto 0);
+		internal_mem_in2: in std_logic_vector(7 downto 0);
+		internal_mem_in3: in std_logic_vector(7 downto 0);
+		membank_address_out: out std_logic_vector(15 downto 0)
+;
+		internal_load_out: out std_logic_vector(3 downto 0)
+		);
+end entity datamem_interface;
+
+architecture behavioural of datamem_interface is
+
+	signal internal_load : std_logic_vector(3 downto 0);
+
+	signal memory_input_0 : std_logic_vector(7 downto 0);
+	signal memory_input_1 : std_logic_vector(7 downto 0);
+	signal memory_input_2 : std_logic_vector(7 downto 0);
+	signal memory_input_3 : std_logic_vector(7 downto 0);
+
+	signal memory_output_0 : std_logic_vector(7 downto 0);
+	signal memory_output_1 : std_logic_vector(7 downto 0);
+	signal memory_output_2 : std_logic_vector(7 downto 0);
+	signal memory_output_3 : std_logic_vector(7 downto 0);
+
+	signal membank_address : std_logic_vector(31 downto 0);
+	signal byte_starting_position : std_logic_vector(1 downto 0) := "00";
+
+begin
+	membank_address_acquirement : process (input_data, byte_address, read, write, byte_starting_position, memory_output_0, memory_output_1, memory_output_2, memory_output_3)
+	begin
+		membank_address &lt;= std_logic_vector(shift_right(unsigned(byte_address), 2)); --Dividing by 4 while throwing away non-integer information
+		byte_starting_position &lt;= byte_address(1 downto 0); --Last 2 bits to know if we access the memory or not
+		if (write = '1') then --writing to memory, data needs to be split before it gets saved
+			if (byte_starting_position = "00") then
+				internal_load &lt;= "1111";
+				memory_input_3 &lt;= input_data(31 downto 24);
+				memory_input_2 &lt;= input_data(23 downto 16);
+				memory_input_1 &lt;= input_data(15 downto 8);
+				memory_input_0 &lt;= input_data(7 downto 0);
+			else
+				internal_load &lt;= "0000";
+				memory_input_3 &lt;= X"00";
+				memory_input_2 &lt;= X"00";
+				memory_input_1 &lt;= X"00";
+				memory_input_0 &lt;= X"00";
+			end if;
+		elsif (read = '1') then --reading operation, data needs to be sent to internal registers in the registerfile 
+			internal_load &lt;= "0000";
+			if (byte_starting_position = "00") then
+				output_data &lt;= std_logic_vector(memory_output_3 &amp; memory_output_2 &amp; memory_output_1 &amp; memory_output_0);
+			else
+				output_data &lt;= X"00000000";
+			end if;
+		end if;
+	end process;
+
+	internal_mem_out0&lt;=memory_input_0;
+	internal_mem_out1&lt;=memory_input_1;
+	internal_mem_out2&lt;=memory_input_2;
+	internal_mem_out3&lt;=memory_input_3;
+	memory_output_0&lt;=internal_mem_in0;
+	memory_output_1&lt;=internal_mem_in1;
+	memory_output_2&lt;=internal_mem_in2;
+	memory_output_3&lt;=internal_mem_in3;
+	internal_load_out&lt;=internal_load;
+	membank_address_out&lt;=membank_address(15 downto 0);
+
+end architecture behavioural;
+</vhdl>
+  <vhdl name="register_file">library ieee;
+use ieee.std_logic_1164.all;
+use work.all;
+
+entity register_file is
+	port (
+write_address : in std_logic_vector(4 downto 0);
+		 write_control : in std_logic;
+		 load_vector_out : out std_logic_vector(31 downto 0));
+end entity register_file;
+
+architecture Behavioral of register_file is
+
+	signal internal_reg_load : std_logic_vector(31 downto 0) := X"00000000";
+
+begin
+	register_load_decouple : process (write_address)
+	begin
+		if (write_control = '1') then
+			case write_address is
+				when "00000" =&gt;
+					internal_reg_load(31 downto 0) &lt;= "00000000000000000000000000000001";
+				when "00001" =&gt;
+					internal_reg_load(31 downto 0) &lt;= "00000000000000000000000000000010";
+				when "00010" =&gt;
+					internal_reg_load(31 downto 0) &lt;= "00000000000000000000000000000100";
+				when "00011" =&gt;
+					internal_reg_load(31 downto 0) &lt;= "00000000000000000000000000001000";
+				when "00100" =&gt;
+					internal_reg_load(31 downto 0) &lt;= "00000000000000000000000000010000";
+				when "00101" =&gt;
+					internal_reg_load(31 downto 0) &lt;= "00000000000000000000000000100000";
+				when "00110" =&gt;
+					internal_reg_load(31 downto 0) &lt;= "00000000000000000000000001000000";
+				when "00111" =&gt;
+					internal_reg_load(31 downto 0) &lt;= "00000000000000000000000010000000";
+				when "01000" =&gt;
+					internal_reg_load(31 downto 0) &lt;= "00000000000000000000000100000000";
+				when "01001" =&gt;
+					internal_reg_load(31 downto 0) &lt;= "00000000000000000000001000000000";
+				when "01010" =&gt;
+					internal_reg_load(31 downto 0) &lt;= "00000000000000000000010000000000";
+				when "01011" =&gt;
+					internal_reg_load(31 downto 0) &lt;= "00000000000000000000100000000000";
+				when "01100" =&gt;
+					internal_reg_load(31 downto 0) &lt;= "00000000000000000001000000000000";
+				when "01101" =&gt;
+					internal_reg_load(31 downto 0) &lt;= "00000000000000000010000000000000";
+				when "01110" =&gt;
+					internal_reg_load(31 downto 0) &lt;= "00000000000000000100000000000000";
+				when "01111" =&gt;
+					internal_reg_load(31 downto 0) &lt;= "00000000000000001000000000000000";
+				when "10000" =&gt;
+					internal_reg_load(31 downto 0) &lt;= "00000000000000010000000000000000";
+				when "10001" =&gt;
+					internal_reg_load(31 downto 0) &lt;= "00000000000000100000000000000000";
+				when "10010" =&gt;
+					internal_reg_load(31 downto 0) &lt;= "00000000000001000000000000000000";
+				when "10011" =&gt;
+					internal_reg_load(31 downto 0) &lt;= "00000000000010000000000000000000";
+				when "10100" =&gt;
+					internal_reg_load(31 downto 0) &lt;= "00000000000100000000000000000000";
+				when "10101" =&gt;
+					internal_reg_load(31 downto 0) &lt;= "00000000001000000000000000000000";
+				when "10110" =&gt;
+					internal_reg_load(31 downto 0) &lt;= "00000000010000000000000000000000";
+				when "10111" =&gt;
+					internal_reg_load(31 downto 0) &lt;= "00000000100000000000000000000000";
+				when "11000" =&gt;
+					internal_reg_load(31 downto 0) &lt;= "00000001000000000000000000000000";
+				when "11001" =&gt;
+					internal_reg_load(31 downto 0) &lt;= "00000010000000000000000000000000";
+				when "11010" =&gt;
+					internal_reg_load(31 downto 0) &lt;= "00000100000000000000000000000000";
+				when "11011" =&gt;
+					internal_reg_load(31 downto 0) &lt;= "00001000000000000000000000000000";
+				when "11100" =&gt;
+					internal_reg_load(31 downto 0) &lt;= "00010000000000000000000000000000";
+				when "11101" =&gt;
+					internal_reg_load(31 downto 0) &lt;= "00100000000000000000000000000000";
+				when "11110" =&gt;
+					internal_reg_load(31 downto 0) &lt;= "01000000000000000000000000000000";
+				when "11111" =&gt;
+					internal_reg_load(31 downto 0) &lt;= "10000000000000000000000000000000";
+				when others =&gt;
+					internal_reg_load(31 downto 0) &lt;= "00000000000000000000000000000000";
+
+			end case;
+		else
+			internal_reg_load(31 downto 0) &lt;= "00000000000000000000000000000000";
+		end if;
+	end process;
+
+	load_vector_out &lt;= internal_reg_load;
+end architecture Behavioral;
+</vhdl>
+  <vhdl name="mux_32_1">library ieee;
+use ieee.std_logic_1164.all;
+
+entity mux_32_1 is
+	port (selection : in std_logic_vector(4 downto 0);
+		input_0 : in std_logic_vector(31 downto 0);
+		input_1 : in std_logic_vector(31 downto 0);
+		input_2 : in std_logic_vector(31 downto 0);
+		input_3 : in std_logic_vector(31 downto 0);
+		input_4 : in std_logic_vector(31 downto 0);
+		input_5 : in std_logic_vector(31 downto 0);
+		input_6 : in std_logic_vector(31 downto 0);
+		input_7 : in std_logic_vector(31 downto 0);
+		input_8 : in std_logic_vector(31 downto 0);
+		input_9 : in std_logic_vector(31 downto 0);
+		input_10 : in std_logic_vector(31 downto 0);
+		input_11 : in std_logic_vector(31 downto 0);
+		input_12 : in std_logic_vector(31 downto 0);
+		input_13 : in std_logic_vector(31 downto 0);
+		input_14 : in std_logic_vector(31 downto 0);
+		input_15 : in std_logic_vector(31 downto 0);
+		input_16 : in std_logic_vector(31 downto 0);
+		input_17 : in std_logic_vector(31 downto 0);
+		input_18 : in std_logic_vector(31 downto 0);
+		input_19 : in std_logic_vector(31 downto 0);
+		input_20 : in std_logic_vector(31 downto 0);
+		input_21 : in std_logic_vector(31 downto 0);
+		input_22 : in std_logic_vector(31 downto 0);
+		input_23 : in std_logic_vector(31 downto 0);
+		input_24 : in std_logic_vector(31 downto 0);
+		input_25 : in std_logic_vector(31 downto 0);
+		input_26 : in std_logic_vector(31 downto 0);
+		input_27 : in std_logic_vector(31 downto 0);
+		input_28 : in std_logic_vector(31 downto 0);
+		input_29 : in std_logic_vector(31 downto 0);
+		input_30 : in std_logic_vector(31 downto 0);
+		input_31 : in std_logic_vector(31 downto 0);
+		output_0 : out std_logic_vector(31 downto 0));
+end mux_32_1;
+
+architecture behavioral of mux_32_1 is
+signal dummy : std_logic_vector(31 downto 0):=x"00000000";
+begin
+	with selection select
+		output_0 &lt;=
+		input_0 when "00000",
+		input_1 when "00001",
+		input_2 when "00010",
+		input_3 when "00011",
+		input_4 when "00100",
+		input_5 when "00101",
+		input_6 when "00110",
+		input_7 when "00111",
+		input_8 when "01000",
+		input_9 when "01001",
+		input_10 when "01010",
+		input_11 when "01011",
+		input_12 when "01100",
+		input_13 when "01101",
+		input_14 when "01110",
+		input_15 when "01111",
+		input_16 when "10000",
+		input_17 when "10001",
+		input_18 when "10010",
+		input_19 when "10011",
+		input_20 when "10100",
+		input_21 when "10101",
+		input_22 when "10110",
+		input_23 when "10111",
+		input_24 when "11000",
+		input_25 when "11001",
+		input_26 when "11010",
+		input_27 when "11011",
+		input_28 when "11100",
+		input_29 when "11101",
+		input_30 when "11110",
+		input_31 when "11111",
+		dummy when others;
+end behavioral;
+</vhdl>
+  <vhdl name="reg32b_falling_edge">library ieee;
+use ieee.std_logic_1164.all;
+
+entity reg32b_falling_edge is
+	port (reg_in : in std_logic_vector(31 downto 0);
+		load : in std_logic;
+		clock : in std_logic;
+		clear : in std_logic;
+		reg_out : out std_logic_vector(31 downto 0));
+end reg32b_falling_edge;
+
+architecture description of reg32b_falling_edge is
+	signal internal_value : std_logic_vector(31 downto 0) := X"00000000";
+begin
+	process (clock, clear, load, internal_value)
+	begin
+		if (clear = '1') then
+			internal_value &lt;= X"00000000";
+		elsif falling_edge(clock) then
+			if (load = '1') then
+				internal_value &lt;= reg_in;
+			else
+				internal_value &lt;= internal_value;
+			end if;
+		end if;
+		reg_out &lt;= internal_value;
+	end process;
+end description;
+</vhdl>
+  <vhdl name="reg32b">library ieee;
+use ieee.std_logic_1164.all;
+
+entity reg32b is
+	port (
+		reg_in : in std_logic_vector(31 downto 0);
+		load, clock, clear : in std_logic;
+		reg_out : out std_logic_vector(31 downto 0)
+	);
+end reg32b;
+
+architecture description of reg32b is
+	signal internal_value : std_logic_vector(31 downto 0) := X"00000000";
+begin
+	process (clock, clear, load, internal_value)
+	begin
+		if (clear = '1') then
+			internal_value &lt;= X"00000000";
+		elsif rising_edge(clock) then
+			if (load = '1') then
+				internal_value &lt;= reg_in;
+			else
+				internal_value &lt;= internal_value;
+			end if;
+		end if;
+		reg_out &lt;= internal_value;
+	end process;
+end description;
+</vhdl>
+  <vhdl name="reg1b">library ieee;
+use ieee.std_logic_1164.all;
+
+entity reg1b is
+	port (
+		reg_in : in std_logic;
+		load, clock, clear : in std_logic;
+		reg_out : out std_logic
+	);
+end reg1b;
+
+architecture description of reg1b is
+	signal internal_value : std_logic := '0';
+begin
+	process (clock, clear, load, internal_value)
+	begin
+		if (clear = '1') then
+			internal_value &lt;= '0';
+		elsif rising_edge(clock) then
+			if (load = '1') then
+				internal_value &lt;= reg_in;
+			else
+				internal_value &lt;= internal_value;
+			end if;
+		end if;
+		reg_out &lt;= internal_value;
+	end process;
+end description;
+</vhdl>
+  <vhdl name="reg2b">library ieee;
+use ieee.std_logic_1164.all;
+
+entity reg2b is
+	port (
+		reg_in : in std_logic_vector(1 downto 0);
+		load, clock, clear : in std_logic;
+		reg_out : out std_logic_vector(1 downto 0)
+	);
+end reg2b;
+
+architecture description of reg2b is
+	signal internal_value : std_logic_vector(1 downto 0) := "00";
+begin
+	process (clock, clear, load, internal_value)
+	begin
+		if (clear = '1') then
+			internal_value &lt;= "00";
+		elsif rising_edge(clock) then
+			if (load = '1') then
+				internal_value &lt;= reg_in;
+			else
+				internal_value &lt;= internal_value;
+			end if;
+		end if;
+		reg_out &lt;= internal_value;
+	end process;
+end description;
+</vhdl>
+  <vhdl name="reg3b">library ieee;
+use ieee.std_logic_1164.all;
+
+entity reg3b is
+	port (
+		reg_in : in std_logic_vector(2 downto 0);
+		load, clock, clear : in std_logic;
+		reg_out : out std_logic_vector(2 downto 0)
+	);
+end reg3b;
+
+architecture description of reg3b is
+	signal internal_value : std_logic_vector(2 downto 0) := "000";
+begin
+	process (clock, clear, load, internal_value)
+	begin
+		if (clear = '1') then
+			internal_value &lt;= "000";
+		elsif rising_edge(clock) then
+			if (load = '1') then
+				internal_value &lt;= reg_in;
+			else
+				internal_value &lt;= internal_value;
+			end if;
+		end if;
+		reg_out &lt;= internal_value;
+	end process;
+end description;
+</vhdl>
+  <vhdl name="reg4b">library ieee;
+use ieee.std_logic_1164.all;
+
+entity reg4b is
+	port (
+		reg_in : in std_logic_vector(3 downto 0);
+		load, clock, clear : in std_logic;
+		reg_out : out std_logic_vector(3 downto 0)
+	);
+end reg4b;
+
+architecture description of reg4b is
+	signal internal_value : std_logic_vector(3 downto 0) := "0000";
+begin
+	process (clock, clear, load, internal_value)
+	begin
+		if (clear = '1') then
+			internal_value &lt;= "0000";
+		elsif rising_edge(clock) then
+			if (load = '1') then
+				internal_value &lt;= reg_in;
+			else
+				internal_value &lt;= internal_value;
+			end if;
+		end if;
+		reg_out &lt;= internal_value;
+	end process;
+end description;
+</vhdl>
+  <vhdl name="reg5b">library ieee;
+use ieee.std_logic_1164.all;
+
+entity reg5b is
+	port (
+		reg_in : in std_logic_vector(4 downto 0);
+		load, clock, clear : in std_logic;
+		reg_out : out std_logic_vector(4 downto 0)
+	);
+end reg5b;
+
+architecture description of reg5b is
+	signal internal_value : std_logic_vector(4 downto 0) := "00000";
+begin
+	process (clock, clear, load, internal_value)
+	begin
+		if (clear = '1') then
+			internal_value &lt;= "00000";
+		elsif rising_edge(clock) then
+			if (load = '1') then
+				internal_value &lt;= reg_in;
+			else
+				internal_value &lt;= internal_value;
+			end if;
+		end if;
+		reg_out &lt;= internal_value;
+	end process;
+end description;
+</vhdl>
+  <vhdl name="mux_2_1">library ieee;
+use ieee.std_logic_1164.all;
+
+entity mux_2_1 is
+	port (
+		selection : in std_logic;
+		input_0, input_1 : in std_logic_vector(31 downto 0);
+		output_0 : out std_logic_vector(31 downto 0)
+	);
+end mux_2_1;
+
+architecture behavioral of mux_2_1 is
+begin
+	with selection select
+		output_0 &lt;=
+		input_0 when '0',
+		input_1 when '1';
+end behavioral;</vhdl>
+</project>
