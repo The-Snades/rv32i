@@ -16,7 +16,7 @@ ENTITY alu_control IS
   PORT (
   ------------------------------------------------------------------------------
   --Insert input ports below
-    I        : IN  std_logic_vector(31 DOWNTO 0); 
+    I        : IN  std_logic_vector(3 DOWNTO 0); 
     ALUop_in : IN std_logic_vector(1 downto 0); -- input vector example
   ------------------------------------------------------------------------------
   --Insert output ports below
@@ -32,7 +32,7 @@ ARCHITECTURE TypeArchitecture OF alu_control IS
 
 BEGIN
 
-	with I(30)&I(14 downto 12)&ALUop_in select ALUCtrl_o <=
+	with I&ALUop_in select ALUCtrl_o <=
 		"000" when "XXXX00",  --lw e sw (alu add)
 		"001" when "XXXXX1",  --beq (alu subtract)
 		"000" when "00001X",  --R-format (add)
@@ -41,6 +41,6 @@ BEGIN
 		"110" when "01101X",  --R-format (or)
 		
 		
-		"XXX" when others;
+		"100" when others;
 
 END TypeArchitecture;
